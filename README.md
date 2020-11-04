@@ -1,0 +1,1 @@
+# [WIP] Types for Plugin Development in Adobe Photoshop
