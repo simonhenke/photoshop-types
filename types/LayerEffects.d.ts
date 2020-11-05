@@ -1,4 +1,4 @@
-import { BuggedColor } from "./Color";
+import { PsColor } from "./Color";
 import { BlendModeEnum } from "./Common";
 import { PointDescriptor, UVPointDescriptor } from "./Geometry";
 import { GradientDescriptor, GradientTypeEnum } from "./Gradient";
@@ -33,7 +33,7 @@ export interface LayerFxGenericProperties {
 
 export interface ChromeFXDescriptor extends LayerFxGenericProperties {
   _obj: 'chromeFX'
-  color: BuggedColor
+  color: PsColor
   antiAlias: boolean
   invert: boolean
   localLightingAngle: AngleValue
@@ -82,10 +82,10 @@ export interface BevelEmbossDescriptor {
   present: boolean
   showInDialog: boolean
   highlightMode: BlendModeEnum
-  highlightColor: BuggedColor
+  highlightColor: PsColor
   highlightOpacity: PercentValue
   shadowMode: BlendModeEnum
-  shadowColor: BuggedColor
+  shadowColor: PsColor
   shadowOpacity: PercentValue
   bevelTechnique: BevelTechniqueEnum
   bevelStyle: BevelEmbossStyleEnum
@@ -115,7 +115,7 @@ export interface BevelEmbossDescriptor {
 
 export interface InnerGlowDescriptor extends LayerFxGenericProperties {
   _obj: 'innerGlow'
-  color: BuggedColor
+  color: PsColor
   glowTechnique: MatteTechniqueEnum
   chokeMatte: PixelValue
   blur: PixelValue
@@ -182,7 +182,7 @@ export interface FrameFXDescriptorBase extends LayerFxGenericProperties {
   paintType: FrameFillEnum,
   overprint: boolean,
   size: PixelValue,
-  color: BuggedColor,
+  color: PsColor,
 }
 
 export interface PatternDescriptor {
@@ -205,7 +205,7 @@ export interface PatternFillDescriptor extends LayerFxGenericProperties, Pattern
 
 export interface InnerShadowDescriptor extends LayerFxGenericProperties {
   _obj: 'innerShadow'
-  color: BuggedColor
+  color: PsColor
   useGlobalAngle: boolean
   localLightingAngle: AngleValue
   distance: PixelValue
@@ -218,7 +218,7 @@ export interface InnerShadowDescriptor extends LayerFxGenericProperties {
 
 export interface DropShadowDescriptor extends LayerFxGenericProperties {
   _obj: 'dropShadow'
-  color: BuggedColor
+  color: PsColor
   useGlobalAngle: boolean
   localLightingAngle: AngleValue
   distance: PixelValue
@@ -232,7 +232,7 @@ export interface DropShadowDescriptor extends LayerFxGenericProperties {
 
 export interface OuterGlowDescriptor extends LayerFxGenericProperties {
   _obj: 'outerGlow'
-  color: BuggedColor
+  color: PsColor
   glowTechnique: MatteTechniqueEnum
   chokeMatte: PixelValue
   blur: PixelValue
@@ -245,7 +245,7 @@ export interface OuterGlowDescriptor extends LayerFxGenericProperties {
 
 export interface SolidFillDescriptor extends LayerFxGenericProperties {
   _obj: 'solidFill'
-  color: BuggedColor
+  color: PsColor
 }
 
 export interface GradientFillProperties {

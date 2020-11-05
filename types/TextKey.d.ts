@@ -2,6 +2,7 @@ import { BuggedColor } from "./Color";
 import { AlignmentEnum, OrientationEnum, RectangleDescriptor, UVPointDescriptor, UVTopRightBottomLeft } from "./Geometry";
 import { TransformMatrixDescriptor, WarpDescriptor } from "./Transform";
 import { PercentValue, PointValue } from "./Unit";
+import { PathContentsDescriptor } from "./Path";
 
 export interface TextKeyDescriptor {
   _obj: 'textLayer'
@@ -181,25 +182,39 @@ export enum TextLanguage {
 }
 
 export interface JapaneseAlternateEnum {
-  _enum: 'japaneseAlternate',
-  _value: JapaneseAlternate,
+  _enum: 'japaneseAlternate'
+  _value: JapaneseAlternate
 }
 
 export enum JapaneseAlternate {
-  defaultForm = 'defaultForm'
+  defaultForm = 'defaultForm',
+  traditionalForm = 'traditionalForm',
+  expertForm = 'expertForm',
+  JIS78Form = 'JIS78Form',
+  JIS83Form = 'JIS83Form',
+  halfWidthForm = 'halfWidthForm',
+  thirdWidthForm = 'thirdWidthForm',
+  quarterWidthForm = 'quarterWidthForm',
+  fullWidthForm = 'fullWidthForm',
+  proportionalWidthForm = 'proportionalWidthForm',
+
   // expertForm?
   // traditionalForm?
   // TODO: more?
 }
 
 export interface GridAlignmentEnum {
-  _enum: 'gridAlignment',
-  _value: GridAlignment,
+  _enum: 'gridAlignment'
+  _value: GridAlignment
 }
 
 export enum GridAlignment {
   roman = 'roman',
-  textTateChuuYoko = 'textTateChuuYoko',
+  bottom = 'bottom',
+  ifcbottom = 'icfbottom',
+  center = 'center',
+  icftop = 'icftop',
+  top = 'top',
 }
 
 export interface TextStyleDescriptor {
@@ -261,18 +276,19 @@ export interface TextStyleDescriptor {
 }
 
 export interface AutoKernEnum {
-  _enum: 'autoKern',
-  _value: AutoKern,
+  _enum: 'autoKern'
+  _value: AutoKern
 }
 
 export enum AutoKern {
   metricsKern = 'metricsKern',
   opticalKern = 'opticalKern',
+  manual = 'manual',
 }
 
 export interface DirOverrideEnum {
-  _enum: 'dirOverride',
-  _value: DirOverride,
+  _enum: 'dirOverride'
+  _value: DirOverride
 }
 
 export enum DirOverride {
@@ -282,8 +298,8 @@ export enum DirOverride {
 }
 
 export interface DiacVPosEnum {
-  _enum: 'diacVPos',
-  _value: DiacVPos,
+  _enum: 'diacVPos'
+  _value: DiacVPos
 }
 
 export enum DiacVPos {
@@ -295,8 +311,8 @@ export enum DiacVPos {
 }
 
 export interface WariChuJustificationEnum {
-  _enum: 'wariChuJustification',
-  _value: WariChuJustification,
+  _enum: 'wariChuJustification'
+  _value: WariChuJustification
 }
 
 export enum WariChuJustification {
@@ -311,8 +327,8 @@ export enum WariChuJustification {
 }
 
 export interface LineCapEnum {
-  _enum: 'lineCap',
-  _value: LineCap,
+  _enum: 'lineCap'
+  _value: LineCap
 }
 
 export enum LineCap {
@@ -322,8 +338,8 @@ export enum LineCap {
 }
 
 export interface LineJoinEnum {
-  _enum: 'lineJoin',
-  _value: LineJoin,
+  _enum: 'lineJoin'
+  _value: LineJoin
 }
 
 export enum LineJoin {
@@ -365,7 +381,9 @@ export interface BaseParentTextStyleDescriptor extends TextStyleDescriptor {
   lineDashoffset: number,
 }
 
-export interface TextShapeDescriptor {
+export type TextShapeDescriptor = TextShapeGenericProperties | TextShapeOnPathDescriptor
+
+export interface TextShapeGenericProperties {
   _obj: 'textShape'
   bounds: RectangleDescriptor
   char: CharEnum
@@ -379,6 +397,53 @@ export interface TextShapeDescriptor {
   rowMajorOrder: boolean
   spacing: PointValue
   transform: TransformMatrixDescriptor
+}
+
+export interface TextShapeOnPathDescriptor extends TextShapeGenericProperties {
+  flip: boolean
+  path: PathContentsDescriptor
+  pathTypeAlignTo: PathTypeAlignToEnum
+  pathTypeAlignment: PathTypeAlignmentEnum
+  pathTypeEffect: PathTypeEffectEnum
+  pathTypeSpacing: number
+  tRange: TRangeDescriptor
+}
+
+export interface TRangeDescriptor {
+  _obj: 'range'
+  end: number
+  saturation: number
+}
+
+export interface PathTypeEffectEnum {
+  _enum: 'pathTypeEffect'
+  _value: PathTypeEffect
+}
+
+export enum PathTypeEffect {
+  rainbowEffect = 'rainbowEffect',
+  // TODO: more?
+}
+
+export interface PathTypeAlignmentEnum {
+  _enum: 'pathTypeAlignment'
+  _value: PathTypeAlignment
+}
+
+export enum PathTypeAlignment {
+  baselineAlignment = 'baselineAlignment',
+  centerAlignment = 'centerAlignment',
+}
+
+export interface PathTypeAlignToEnum {
+  _enum: 'pathTypeAlignTo'
+  _value: PathTypeAlignTo
+}
+
+export enum PathTypeAlignTo {
+  toPathTop = 'toPathTop',
+  toPathBottom = 'toPathBottom',
+  toPathCenter = 'toPathCenter',
 }
 
 export interface FramBaselineAlignmentEnum {
@@ -411,8 +476,9 @@ export interface TextGriddingEnum {
 }
 
 export enum TextGridding {
-  none = 'none'
-  // TODO: more?
+  none = 'none',
+  round = 'round',
+  systemMetrics = 'systemMetrics',
 }
 
 export interface ParagraphStyleRangeDescriptor extends RangePartial {

@@ -107,7 +107,6 @@ export interface LayerLockingDescriptor {
 
 export interface GeneratorSettingsDescriptor {
   _obj: 'generatorSettings'
-  // TODO: complete
 }
 
 export interface AnimationProtectionDescriptor {
@@ -194,7 +193,7 @@ export interface PatternLayerDescriptor {
 }
 
 export interface LegacyContentData {
-  legacyContentData: any // TODO: type?
+  legacyContentData: ArrayBuffer
 }
 
 export interface BrightnessAndContrastDescriptor extends LegacyContentData {

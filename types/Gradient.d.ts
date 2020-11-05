@@ -1,4 +1,4 @@
-import { BuggedColor, ColorSpaceEnum } from "./Color";
+import { PsColor, ColorSpaceEnum } from "./Color";
 import { PercentValue } from "./Unit";
 
 export interface GradientFormEnum {
@@ -18,12 +18,13 @@ export interface ColorStopTypeEnum {
 
 export enum ColorStopType {
   userStop = 'userStop',
-  // TODO: more?
+  foregroundColor = 'foregroundColor',
+  backgroundColor = 'backgroundColor',
 }
 
 export interface ColorStopDescriptor {
   _obj: 'colorStop',
-  color: BuggedColor,
+  color: PsColor,
   type: ColorStopTypeEnum,
   location: number,
   midpoint: number,

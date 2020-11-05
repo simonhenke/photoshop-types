@@ -26,28 +26,62 @@ export interface SmartObjectMore {
   }
 }
 
+export interface PlacedContentTypeEnum {
+  _enum: 'placed'
+  _value: PlacedContentType
+}
+
+export enum PlacedContentType {
+  rasterizeContent = 'rasterizeContent',
+  vectorData = 'vectorData',
+}
+
 export interface SmartObjectGenericProperties {
   _obj: 'smartObject'
-  placed: {
-    _enum: 'placed'
-    _value: 'rasterizeContent' // TODO: more?
-  },
-  documentID: string,
+  placed: PlacedContentTypeEnum
+  documentID: string
   compsList: {
-    compID: number,
-    originalCompID: number,
+    compID: number
+    originalCompID: number
   },
-  linked: boolean,
-  fileReference: string,
+  linked: boolean
+  fileReference: string | FileReference
 }
 
 export interface LinkedSmartObjectDescriptor extends SmartObjectGenericProperties {
-  link: {
-    _path: string
-    _kind: 'local' | string // TODO: more?
-  }
+  link: FileReference
   linkMissing: boolean
   linkChanged: boolean
+}
+
+export interface FileReference {
+  _path: string
+  _kind: FileReferenceKind
+}
+
+export enum FileReferenceKind {
+  local = 'local',
+  cloud = 'cloud',
+}
+
+export interface CloudLinkDescriptor {
+  _obj: 'ccLibrariesElement'
+  adobeStockId: string
+  adobeStockLiceneseState: AdobeStockLiceneseStateEnum
+  dateModified: number
+  elementReference: string
+  libraryName: string
+  name: string
+}
+
+export interface AdobeStockLiceneseStateEnum {
+  _enum: 'adobeStockLiceneseState'
+  _value: AdobeStockLiceneseState
+}
+
+export enum AdobeStockLiceneseState {
+  licensed = 'licensed',
+  unlicensed = 'unlicensed',
 }
 
 export type SmartObjectDescriptor = SmartObjectGenericProperties | LinkedSmartObjectDescriptor
