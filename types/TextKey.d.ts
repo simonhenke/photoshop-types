@@ -1,4 +1,4 @@
-import { BuggedColor } from "./Color";
+import { PsColor } from "./Color";
 import { AlignmentEnum, OrientationEnum, RectangleDescriptor, UVPointDescriptor, UVTopRightBottomLeft } from "./Geometry";
 import { TransformMatrixDescriptor, WarpDescriptor } from "./Transform";
 import { PercentValue, PointValue } from "./Unit";
@@ -270,8 +270,8 @@ export interface TextStyleDescriptor {
   mojiZume: number
   gridAlignment: GridAlignmentEnum
   noBreak: boolean
-  color: BuggedColor
-  strokeColor: BuggedColor
+  color: PsColor
+  strokeColor: PsColor
   baseParentStyle: BaseParentTextStyleDescriptor
 }
 

@@ -1,5 +1,5 @@
 import { ChannelEnum, ChannelReference } from "./Channel";
-import { BuggedColor, ColorNameEnum } from "./Color";
+import { PsColor, ColorNameEnum } from "./Color";
 import { BlendModeEnum } from "./Common";
 import { PointDescriptor, TopRightBottomleft, UVRectangleDescriptor, UVTopRightBottomLeft } from "./Geometry";
 import { GradientDescriptor, GradientType } from "./Gradient";
@@ -126,7 +126,7 @@ export interface ArtboardDescriptor {
   artboardRect: FloatRectDescriptor
   guideIDs: number[]
   artboardPresetName: string
-  color: BuggedColor
+  color: PsColor
   artboardBackgroundType: number
 }
 
@@ -184,7 +184,7 @@ export type Adjustment =
 
 export interface SolidColorLayerDescriptor {
   _obj: 'solidColorLayer'
-  color: BuggedColor
+  color: PsColor
 }
 
 export interface PatternLayerDescriptor {
