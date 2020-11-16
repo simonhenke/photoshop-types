@@ -93,6 +93,8 @@ export interface StrikeThroughEnum {
 export enum StrikeThrough {
   xHeightStrikethroughOn = 'xHeightStrikethroughOn',
   xHeightStrikethroughOff = 'xHeightStrikethroughOff',
+  eMBoxStrikethroughOn = 'eMBoxStrikethroughOn',
+  strikethroughOff = 'strikethroughOff'
 }
 
 export interface UnderlineEnum {
