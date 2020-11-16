@@ -38,7 +38,7 @@ export interface UVPointDescriptor<UV extends UnitValue = UnitValue> {
   vertical: UV
 }
 
-export interface TopRightBottomleft {
+export interface TopRightBottomLeft {
   top: number
   right: number
   bottom: number
@@ -62,7 +62,7 @@ export enum Orientation {
   vertical = 'vertical'
 }
 
-export interface RectangleDescriptor extends TopRightBottomleft {
+export interface RectangleDescriptor extends TopRightBottomLeft {
   _obj: 'rectangle'
 }
 

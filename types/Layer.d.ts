@@ -1,7 +1,7 @@
 import { ChannelEnum, ChannelReference } from "./Channel";
 import { PsColor, ColorNameEnum } from "./Color";
 import { BlendModeEnum } from "./Common";
-import { PointDescriptor, TopRightBottomleft, UVRectangleDescriptor, UVTopRightBottomLeft } from "./Geometry";
+import { PointDescriptor, TopRightBottomLeft, UVRectangleDescriptor, UVTopRightBottomLeft } from "./Geometry";
 import { GradientDescriptor, GradientType } from "./Gradient";
 import { LayerEffectsDescriptor, PatternDescriptor } from "./LayerEffects";
 import { SmartObjectDescriptor, SmartObjectMore } from "./SmartObject";
@@ -117,7 +117,7 @@ export interface AnimationProtectionDescriptor {
   animationPropagate: boolean
 }
 
-export interface FloatRectDescriptor extends TopRightBottomleft {
+export interface FloatRectDescriptor extends TopRightBottomLeft {
   _obj: 'classFloatRect'
 }
 
