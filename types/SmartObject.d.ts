@@ -1,6 +1,8 @@
+import { PsColor } from "./Color";
+import { BlendModeEnum } from "./Common";
 import { CornersArray, PointDescriptor, PointDescriptorWidthHeight } from "./Geometry";
 import { WarpDescriptorExtended } from "./Transform";
-import { DensityValue, Fraction } from "./Unit";
+import { DensityValue, Fraction, PercentValue } from "./Unit";
 
 export interface SmartObjectMore {
   ID: string // UUID
@@ -46,6 +48,26 @@ export interface SmartObjectGenericProperties {
   },
   linked: boolean
   fileReference: string | FileReference
+  filterFX?: FilterFXDescriptor[]
+}
+
+export interface FilterFXDescriptor {
+  _obj: 'filterFX'
+  backgroundColor: PsColor
+  blendOptions: BlendOptionsDescriptor
+  enabled: boolean
+  filter?: any //TODO: add Descriptors for all Filter types
+  filterID: number
+  foregroundColor: PsColor
+  hasOptions: boolean
+  name: string
+}
+
+export interface BlendOptionsDescriptor {
+  _obj: 'blendOptions'
+  mode: BlendModeEnum
+  opacity: PercentValue
+
 }
 
 export interface LinkedSmartObjectDescriptor extends SmartObjectGenericProperties {
