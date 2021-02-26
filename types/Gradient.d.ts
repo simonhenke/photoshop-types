@@ -81,3 +81,11 @@ export enum GradientType {
   reflected = 'reflected',
   diamond = 'diamond',
 }
+
+export enum GradientTypeNumeric {
+  linear = 0,
+  radial = 1,
+  angle = 2,
+  reflected = 3,
+  diamond = 4,
+}

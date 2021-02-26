@@ -1,3 +1,5 @@
+import { IntentEnum } from "./Document";
+import { PolicyEnum } from "./Preferences";
 import { UnitValue } from "./Unit";
 
 /**
@@ -7,9 +9,9 @@ import { UnitValue } from "./Unit";
  * -------------------------------------------------------------------------------------------------
  */
 
-export type PsColor = PsRGBColorSpace | PsCMYKColorSpace | PsHSBColorSpace | LabColorSpace | GrayscaleColorSpace | OpacityColorSpace
+export type PsColor = PsRGBColorSpace | PsCMYKColorSpace | PsHSBColorSpace | LabColorSpace | GrayscaleColorSpace | OpacityColorSpace | BookColorSpace
 
-export type ColorSpaceKeys = "RGBColor" | "HSBColorClass" | "CMYKColorClass" | "labColor" | "grayscale" | "opacityClass";
+export type ColorSpaceKeys = "RGBColor" | "HSBColorClass" | "CMYKColorClass" | "labColor" | "grayscale" | "opacityClass" | "bookColor";
 
 export interface ColorSpace extends BookColorProperties {
   _obj: ColorSpaceKeys
@@ -20,6 +22,10 @@ export interface BookColorProperties {
   name?: string
   bookID?: number
   bookKey?: any
+}
+
+export interface BookColorSpace extends ColorSpace {
+  _obj: 'bookColor'
 }
 
 export interface ColorSpaceEnum {
@@ -79,6 +85,38 @@ export interface PsHSBColorSpace extends ColorSpace {
   hue: UnitValue
   saturation: number
   brightness: number
+}
+
+export enum CanvasExtensionColorType {
+  foregroundColor = 'foregroundColor',
+  backgroundColor = 'foregroundColor',
+  white = 'white',
+  black = 'black',
+  grey = 'grey',
+  color = 'color',
+}
+
+export interface ColorSettingsDescriptor {
+  _obj: 'colorSettings'
+  name: string
+  workingRGB: string
+  workingCMYK: string
+  workingGray: string
+  workingSpot: string
+  policyRGB: PolicyEnum
+  policyCMYK: PolicyEnum
+  policyGray: PolicyEnum
+  askMismatchOpening: boolean
+  askMismatchPasting: boolean
+  askMissing: boolean
+  engine: string
+  intent: IntentEnum
+  mapBlack: boolean
+  dither: boolean
+  renderSceneReferred: boolean
+  monitorCompression: boolean
+  RGBBlendGamma: boolean
+  TextBlendGamma: number
 }
 
 /**

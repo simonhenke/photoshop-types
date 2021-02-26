@@ -5,6 +5,7 @@ import { GradientDescriptor, GradientTypeEnum } from "./Gradient";
 import { AngleValue, PercentValue, PixelValue } from "./Unit";
 
 export interface LayerEffectsDescriptor {
+  _obj?: "layerEffects",
   scale: PercentValue
   dropShadow?: DropShadowDescriptor
   dropShadowMulti?: DropShadowDescriptor[]

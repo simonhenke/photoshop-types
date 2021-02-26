@@ -56,7 +56,7 @@ export interface FilterFXDescriptor {
   backgroundColor: PsColor
   blendOptions: BlendOptionsDescriptor
   enabled: boolean
-  filter?: any //TODO: add Descriptors for all Filter types
+  filter?: any // TODO: add Descriptors for all Filter types
   filterID: number
   foregroundColor: PsColor
   hasOptions: boolean

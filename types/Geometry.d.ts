@@ -77,3 +77,16 @@ export type CornersArray = [
   number, number, number, number,
   number, number, number, number
 ]
+
+export enum HorizontalLocation {
+  left = 'left',
+  center = 'center',
+  right = 'right',
+}
+
+export enum VerticalLocation {
+  top = 'top',
+  center = 'center',
+  bottomEnum = 'bottomEnum',
+}
+

@@ -5,6 +5,7 @@ import { PointDescriptor, TopRightBottomLeft, UVRectangleDescriptor, UVTopRightB
 import { GradientDescriptor, GradientType } from "./Gradient";
 import { LayerEffectsDescriptor, PatternDescriptor } from "./LayerEffects";
 import { SmartObjectDescriptor, SmartObjectMore } from "./SmartObject";
+import { TextKeyDescriptor } from "./TextKey";
 import { TransformMatrixDescriptor } from "./Transform";
 import { AngleValue, PixelValue } from "./Unit";
 
@@ -37,7 +38,7 @@ export interface LayerDescriptor {
   count: number
   preserveTransparency: boolean
   layerFXVisible: boolean
-  layerEffects: LayerEffectsDescriptor
+  layerEffects?: LayerEffectsDescriptor
   globalAngle: number
   background: boolean
   layerSection: LayerSectionTypeEnum
@@ -56,6 +57,7 @@ export interface LayerDescriptor {
   userMaskFeather: number
   vectorMaskDensity: number
   vectorMaskFeather: number
+  boundingBox?:UVRectangleDescriptor<PixelValue> 
   bounds: UVRectangleDescriptor<PixelValue>
   boundsNoEffects: UVRectangleDescriptor<PixelValue>
   boundsNoMask: UVRectangleDescriptor<PixelValue>
@@ -69,6 +71,7 @@ export interface LayerDescriptor {
   vectorMaskEnabled: boolean
   vectorMaskEmpty: boolean
   textWarningLevel: number
+  textKey?: TextKeyDescriptor
   parentLayerID: number
 
   // --- Smart Object Layer

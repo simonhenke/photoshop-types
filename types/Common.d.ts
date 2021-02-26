@@ -25,16 +25,27 @@ export enum BlendMode {
   hue = 'hue',
   saturation = 'saturation',
   color = 'color',
-  luminosity = 'luminosity'
+  luminosity = 'luminosity',
+
+
+  // Headling Tools
+  replace = 'replace',
+
+  // Brush Tools
+  behind = 'behind',
+  clearEnum = 'clearEnum',
+
+  // Dodge & Burn Tools
+  dodgeS = 'dodgeS',
+  dodgeM = 'dodgeM',
+  dodgeH = 'dodgeH',
+
+  // Saturation Tool
+  desaturate = 'desaturate',
+  saturate = 'saturate',
 }
 
 export interface BlendModeEnum {
   _enum: 'blendMode'
   _value: BlendMode
-}
-
-export enum StrokeStyleAlign {
-  outside = 'strokeStyleAlignOutside',
-  inside = 'strokeStyleAlignInside',
-  center = 'strokeStyleAlignCenter',
 }
