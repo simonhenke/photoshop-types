@@ -43,7 +43,7 @@ import {
 import { FileReference } from './SmartObject'
 import {
   CurrentToolOptionsDescriptor,
-  FontListDescriptor,
+  FontListPresetDescriptor,
   ToolEnum,
   VectorToolSettingsDescriptor,
 } from './Tool'
@@ -124,7 +124,7 @@ export interface ApplicationDescriptor {
   defaultAppScript: number
   regionCode: number
   presetManager: PresetManager
-  fontList: FontListDescriptor
+  fontList: FontListPresetDescriptor
   fontLargeName: string
   fontLargeSize: number
   fontSmallName: string

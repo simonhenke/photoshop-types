@@ -1,0 +1,22 @@
+{
+  "name": "photoshop-types",
+  "version": "1.0.1",
+  "description": "Type definitions for most of the internal descriptors and properties in Adobe Photoshop, which are helpful for UXP plugin development",
+  "main": "index.d.ts",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonhenke/photoshop-types.git"
+  },
+  "keywords": [],
+  "author": "Simon Henke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simonhenke/photoshop-types/issues"
+  },
+  "homepage": "https://github.com/simonhenke/photoshop-types#readme",
+  "devDependencies": {}
+}

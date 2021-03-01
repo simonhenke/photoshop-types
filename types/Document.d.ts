@@ -1,4 +1,4 @@
-import { ColorSpaceKeys, PsColor } from './Color'
+import { ColorSpaceEnum, ColorSpaceKeys, PsColor } from './Color'
 import { TopRightBottomLeft, UVPointDescriptor } from './Geometry'
 import { GeneratorSettingsDescriptor } from './Layer'
 import {
@@ -70,11 +70,6 @@ export interface DocumentDescriptor {
   rulersVisibility: boolean
   slices: Slices
   patternPreviewMode: boolean
-}
-
-export interface ColorSpaceEnum {
-  _enum: 'colorSpace'
-  _value: ColorSpaceKeys
 }
 
 export interface FileInfo {

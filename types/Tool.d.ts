@@ -666,7 +666,7 @@ export interface TextToolCharacterOptions {
   textGridding: TextGriddingEnum
 }
 
-export interface FontListDescriptor<ObjectClass extends string = 'favoriteFontList'> {
+export interface FontListPresetDescriptor<ObjectClass extends string = 'favoriteFontList'> {
   _obj: ObjectClass
   fontPostScriptName: string[]
 }
@@ -674,8 +674,8 @@ export interface FontListDescriptor<ObjectClass extends string = 'favoriteFontLi
 export interface TextToolOptionsDescriptor {
   _obj: 'textToolOptions'
   textNewTextOrientation: 0
-  favoriteFontList: FontListDescriptor
-  recentFontList:FontListDescriptor<'recentFontList'>
+  favoriteFontList: FontListPresetDescriptor
+  recentFontList:FontListPresetDescriptor<'recentFontList'>
 }
 
 export interface TypeToolOptionsDescriptor extends CTODesc {
