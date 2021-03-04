@@ -102,7 +102,7 @@ export interface PsHSBColorSpace extends ColorSpace {
 
 export type CanvasExtensionColorType =
   | "foregroundColor"
-  | "foregroundColor"
+  | "backgroundColor"
   | "white"
   | "black"
   | "grey"
