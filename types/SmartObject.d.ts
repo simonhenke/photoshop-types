@@ -33,10 +33,7 @@ export interface PlacedContentTypeEnum {
   _value: PlacedContentType
 }
 
-export enum PlacedContentType {
-  rasterizeContent = 'rasterizeContent',
-  vectorData = 'vectorData',
-}
+export type PlacedContentType = 'rasterizeContent' | 'vectorData'
 
 export interface SmartObjectGenericProperties {
   _obj: 'smartObject'
@@ -81,10 +78,7 @@ export interface FileReference {
   _kind: FileReferenceKind
 }
 
-export enum FileReferenceKind {
-  local = 'local',
-  cloud = 'cloud',
-}
+export type FileReferenceKind = 'local' | 'cloud'
 
 export interface CloudLinkDescriptor {
   _obj: 'ccLibrariesElement'
@@ -101,9 +95,6 @@ export interface AdobeStockLiceneseStateEnum {
   _value: AdobeStockLiceneseState
 }
 
-export enum AdobeStockLiceneseState {
-  licensed = 'licensed',
-  unlicensed = 'unlicensed',
-}
+export type AdobeStockLiceneseState = 'licensed' | 'unlicensed'
 
 export type SmartObjectDescriptor = SmartObjectGenericProperties | LinkedSmartObjectDescriptor

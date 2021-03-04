@@ -15,12 +15,7 @@ export interface PathKindEnum {
   _value: PathKind
 }
 
-export enum PathKind {
-  vectorMask = 'vectorMask',
-  workPath = 'workPath',
-  clippingPath = 'clippingPath',
-  normalPath = 'normalPath',
-}
+export type PathKind = 'vectorMask' | 'workPath' | 'clippingPath' | 'normalPath' 
 
 export interface PathContentsDescriptor {
   _obj: 'pathClass',
@@ -32,13 +27,7 @@ export interface ShapeOperationEnum {
   _value: ShapeOperation
 }
 
-export enum ShapeOperation {
-  add = 'add',
-  subtract = 'subtract',
-  intersect = 'intersect',
-  interfaceIconFrameDimmed = 'interfaceIconFrameDimmed',
-  xor = 'xor',
-}
+export type ShapeOperation = 'add' | 'subtract' | 'intersect' | 'interfaceIconFrameDimmed' | 'xor'
 
 export interface PathComponentDescriptor {
   _obj: 'pathComponent'

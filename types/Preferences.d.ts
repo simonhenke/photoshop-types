@@ -13,27 +13,14 @@ export interface InterpolationMethodEnum {
   _value: InterpolationType
 }
 
-export enum InterpolationType {
-  bicubic = 'bicubic',
-  bicubicAutomatic = 'bicubicAutomatic',
-  bicubicSmoother = 'bicubicSmoother',
-  bicubicSharper = 'bicubicSharper',
-  bilinear = 'bilinear',
-  preserveDetailsUpscale = 'preserveDetailsUpscale',
-  deepUpscale = 'deepUpscale',
-  nearestNeighbor = 'nearestNeighbor',
-}
+export type InterpolationType = 'bicubic' | 'bicubicAutomatic' | 'bicubicSmoother' | 'bicubicSharper' | 'bilinear' | 'preserveDetailsUpscale' | 'deepUpscale' | 'nearestNeighbor'
 
 export interface CursorKindEnum {
   _enum: 'cursorKind'
   _value: CursorKind
 }
 
-export enum CursorKind {
-  brushSize = 'brushSize',
-  precise = 'precise',
-  standard = 'precise',
-}
+export type CursorKind = 'brushSize' | 'precise' | 'standard'
 
 export interface InterfaceColorDescriptor {
   _obj: 'interfaceColor'
@@ -66,11 +53,7 @@ export interface EyeDropperSampleTypeEnum {
 
 export type EyeDropperSampleSize = 5 | 15 | 25 | 50
 
-export enum EyeDropperSampleType {
-  samplePoint = 'samplePoint',
-  sample3x3 = 'sample3x3',
-  sample5x5 = 'sample5x5',
-}
+export type EyeDropperSampleType = 'samplePoint' | 'sample3x3' | 'sample5x5'
 
 export interface ColorPickerPrefsDescriptor {
   _obj: 'colorPickerPrefsClass'
@@ -83,10 +66,7 @@ export interface PickerKindTypeEnum {
   _value: PickerKindType
 }
 
-export enum PickerKindType {
-  photoshopPicker = 'photoshopPicker',
-  // TODO: more?
-}
+export type PickerKindType = 'photoshopPicker' // TODO: more?
 
 export interface GlobalAngleDescriptor {
   _obj: 'globalAngle'
@@ -99,22 +79,14 @@ export interface SaveHistoryToTypeEnum {
   _value: SaveHistoryToType
 }
 
-export enum SaveHistoryToType {
-  metadata = 'metadata',
-  textFile = 'textFile',
-  both = 'both',
-}
+export type SaveHistoryToType = 'metadata' | 'textFile' | 'both'
 
 export interface EditLogItemsTypeEnum {
   _enum: 'editLogItemsType'
   _value: EditLogItemsType
 }
 
-export enum EditLogItemsType {
-  session = 'session',
-  concise = 'concise',
-  detailed = 'detailed',
-}
+export type EditLogItemsType = 'session' | 'concise' | 'detailed'
 
 export interface GeneralPreferencesDescriptor {
   _obj: 'generalPreferences'
@@ -149,37 +121,21 @@ export interface CanvasScreenModeEnum {
   _value: CanvasScreenMode
 }
 
-export enum CanvasScreenMode {
-  screenModeArtboard = 'screenModeArtboard',
-  screenModeFullScreen = 'screenModeFullScreen',
-  screenModeFullScreenWithMenubar = 'screenModeFullScreenWithMenubar',
-  screenModeStandard = 'screenModeStandard',
-}
+export type CanvasScreenMode = 'screenModeArtboard' | 'screenModeFullScreen' | 'screenModeFullScreenWithMenubar' | 'screenModeStandard'
 
 export interface CanvasColorTypeEnum {
   _enum: 'canvasColorType'
   _value: CanvasColorType
 }
 
-export enum CanvasColorType {
-  defaultGray = 'defaultGray',
-  darkGray = 'darkGray',
-  lightGray = 'lightGray',
-  black = 'black',
-  mediumGray = 'mediumGray',
-  custom = 'custom',
-}
+export type CanvasColorType = 'defaultGray' | 'darkGray' | 'lightGray' | 'black' | 'mediumGray' | 'custom'
 
 export interface CanvasFrameStyleEnum {
   _enum: 'canvasFrameStyle'
   _value: CanvasFrameStyle
 }
 
-export enum CanvasFrameStyle {
-  dropShadow = 'dropShadow',
-  line = 'line',
-  none = 'none',
-}
+export type CanvasFrameStyle = 'dropShadow' | 'line' | 'none' 
 
 export interface CanvasAttributesDescriptor {
   _obj: 'canvasAttributes'
@@ -194,34 +150,21 @@ export interface PaletteFontTypeEnum {
   _value: PaletteFontType
 }
 
-export enum PaletteFontType {
-  preferTinyPaletteFontType = 'preferTinyPaletteFontType',
-  preferSmallPaletteFontType = 'preferSmallPaletteFontType',
-  preferMediumPaletteFontType = 'preferMediumPaletteFontType',
-  preferLargePaletteFontType = 'preferLargePaletteFontType',
-}
+export type PaletteFontType = 'preferTinyPaletteFontType' | 'preferSmallPaletteFontType' | 'preferMediumPaletteFontType' | 'preferLargePaletteFontType'
 
 export interface UiBrightnessLevelEnum {
   _enum: 'uiBrightnessLevelEnumType'
   _value: UiBrightnessLevel
 }
 
-export enum UiBrightnessLevel {
-  kPanelBrightnessDarkGray = 'kPanelBrightnessDarkGray',
-  kPanelBrightnessMediumGray = 'kPanelBrightnessMediumGray',
-  kPanelBrightnessLightGray = 'kPanelBrightnessLightGray',
-  kPanelBrightnessOriginal = 'kPanelBrightnessOriginal',
-}
+export type UiBrightnessLevel = 'kPanelBrightnessDarkGray' | 'kPanelBrightnessMediumGray' | 'kPanelBrightnessLightGray' | 'kPanelBrightnessOriginal'
 
 export interface HighlightColorOptionEnum {
   _enum: 'highlightColorOptionEnumType'
   _value: HighlightColorOption
 }
 
-export enum HighlightColorOption {
-  uiDefaultHighlightColor = 'uiDefaultHighlightColor',
-  uiBlueHighlightColor = 'uiBlueHighlightColor',
-}
+export type HighlightColorOption = 'uiDefaultHighlightColor' | 'uiBlueHighlightColor'
 
 export interface InterfacePrefsDescriptor {
   _obj: 'interfacePrefs'
@@ -252,13 +195,7 @@ export interface ShowHUDStateEnum {
   _value: ShowHUDState
 }
 
-export enum ShowHUDState {
-  showHUDNever = 'showHUDNever',
-  showHUDTopLeft = 'showHUDTopLeft',
-  showHUDTopRight = 'showHUDTopRight',
-  showHUDBottomLeft = 'showHUDBottomLeft',
-  showHUDBottomRight = 'showHUDBottomRight',
-}
+export type ShowHUDState = 'showHUDNever' | 'showHUDTopLeft' | 'showHUDTopRight' | 'showHUDBottomLeft' | 'showHUDBottomRight'
 
 export interface ToolsPreferencesDescriptor {
   _obj: 'toolsPreferences'
@@ -293,11 +230,7 @@ export interface QueryStateEnum {
   _value: QueryState
 }
 
-export enum QueryState {
-  queryAlways = 'queryAlways',
-  queryAsk = 'queryAsk',
-  queryNever = 'queryNever',
-}
+export type QueryState = 'queryAlways' | 'queryAsk' | 'queryNever'
 
 export interface FileSavePrefsDescriptor {
   _obj: 'fileSavePrefsClass'
@@ -322,12 +255,7 @@ export interface FileSavePrefsDescriptor {
   recentFiles: number
 }
 
-export enum ExportFileType {
-  PNG = 'PNG',
-  JPG = 'JPG',
-  GIF = 'GIF',
-  SVG = 'SVG',
-}
+export type ExportFileType = 'PNG' | 'JPG' | 'GIF' | 'SVG'
 
 export interface ExportAssetsPrefsDescriptor {
   _obj: 'exportAssetsPrefs'
@@ -346,11 +274,7 @@ export interface GpuModeEnum {
   _value: GpuMode
 }
 
-export enum GpuMode {
-  safe = 'safe', // basic
-  advanced = 'advanced', // normal
-  performance = 'performance', // advanced
-}
+export type GpuMode = 'safe' | 'advanced' | 'performance' // order is basic, normal, advanced
 
 export interface OpenglAdvancedDescriptor {
   _obj: 'openglAdvanced'
@@ -392,10 +316,7 @@ export interface CursorShapeEnum {
   _value: CursorShape
 }
 
-export enum CursorShape {
-  normal = 'normal',
-  fullSize = 'fullSize',
-}
+export type CursorShape = 'normal' | 'fullSize'
 
 export interface DisplayPrefsDescriptor {
   _obj: 'displayPrefs'
@@ -415,29 +336,14 @@ export interface TransparencyGamutPreferencesEnum {
   _value: TransparencyGamutPreferences
 }
 
-export enum TransparencyGamutPreferences {
-  none = 'none',
-  small = 'small',
-  medium = 'medium',
-  large = 'large',
-}
+export type TransparencyGamutPreferences = 'none' | 'small' | 'medium' | 'large'
 
 export interface TransparencyGridColorsTypeEnum {
   _enum: 'transparencyGridColorsType'
   _value: TransparencyGridColorsType
 }
 
-export enum TransparencyGridColorsType {
-  light = 'light',
-  medium = 'medium',
-  dark = 'dark',
-  red = 'red',
-  orange = 'orange',
-  grain = 'grain',
-  blue = 'blue',
-  purple = 'purple',
-  customEnum = 'customEnum',
-}
+export type TransparencyGridColorsType = 'light' | 'medium' | 'dark' | 'red' | 'orange' | 'grain' | 'blue' | 'purple' | 'customEnum'
 
 export interface TransparencyPrefsDescriptor {
   _obj: 'transparencyPrefs'
@@ -465,51 +371,36 @@ export interface GuideGridColorEnum {
   _value: GuideGridColor
 }
 
-export enum GuideGridColor {
-  lightBlue = 'lightBlue',
-  lightRed = 'lightRed',
-  grain = 'grain',
-  mediumBlue = 'mediumBlue',
-  yellow = 'yellow',
-  magenta = 'magenta',
-  cyan = 'cyan',
-  lightGray = 'lightGray',
-  black = 'black',
-  customEnum = 'customEnum',
-}
+export type GuideGridColor = 'lightBlue' | 'lightRed' | 'grain' | 'mediumBlue' | 'yellow' | 'magenta' | 'cyan' | 'lightGray' | 'black' | 'customEnum'
 
 export interface GuideGridStyleEnum {
   _enum: 'guideGridStyle'
   _value: GuideGridStyle
 }
 
-export enum GuideGridStyle {
-  lens = 'lens',
-  dashedLine = 'dashedLine',
-  dots = 'dots',
-}
+export type GuideGridStyle = 'lens' | 'dashedLine' | 'dots'
 
 export interface ControlColorChartreuseEnum {
   _enum: 'controlColorChartreuse'
   _value: ControlColorChartreuse
 }
 
-export enum ControlColorChartreuse {
-  controlColorClassic = 'controlColorClassic',
-  controlColorDefault = 'controlColorDefault',
-  controlColorGreen = 'controlColorGreen',
-  controlColorChartreuse = 'controlColorChartreuse',
-  controlColorYellow = 'controlColorYellow',
-  controlColorOrange = 'controlColorOrange',
-  controlColorRed = 'controlColorRed',
-  controlColorMagenta = 'controlColorMagenta',
-  controlColorPurple = 'controlColorPurple',
-  controlColorIndigo = 'controlColorIndigo',
-  controlColorFuchsia = 'controlColorFuchsia',
-  controlColorSeaFoam = 'controlColorSeaFoam',
-  controlColorWhite = 'controlColorWhite',
-  controlColorBlack = 'controlColorBlack',
-}
+export type ControlColorChartreuse =
+  'controlColorClassic' |
+  'controlColorDefault' |
+  'controlColorGreen' |
+  'controlColorChartreuse' |
+  'controlColorYellow' |
+  'controlColorOrange' |
+  'controlColorRed' |
+  'controlColorMagenta' |
+  'controlColorPurple' |
+  'controlColorIndigo' |
+  'controlColorFuchsia' |
+  'controlColorSeaFoam' |
+  'controlColorWhite' |
+  'controlColorBlack' 
+
 
 export interface GuidesPrefsDescriptor {
   _obj: 'guidesPrefs'
@@ -549,22 +440,14 @@ export interface TextCompModeEnum {
   _value: TextCompMode
 }
 
-export enum TextCompMode {
-  defaultTextInterface = 'defaultTextInterface',
-  advancedAsianInterface = 'advancedAsianInterface',
-  middleEasternInterface = 'middleEasternInterface',
-}
+export type TextCompMode = 'defaultTextInterface' | 'advancedAsianInterface' | 'middleEasternInterface'
 
 export interface FontPreviewsSizeEnum {
   _enum: 'fontPreviewsSize'
   _value: FontPreviewsSize
 }
 
-export enum FontPreviewsSize {
-  small = 'small',
-  medium = 'medium',
-  large = 'large',
-}
+export type FontPreviewsSize = 'small' | 'medium' | 'large'
 
 export interface TypePreferencesDescriptor {
   _obj: 'typePreferences'
@@ -627,20 +510,11 @@ export interface CheckerboardSizeEnum {
   _value: CheckerboardSize
 }
 
-export enum CheckerboardSize {
-  checkerboardNone = 'checkerboardNone',
-  checkerboardSmall = 'checkerboardSmall',
-  checkerboardMedium = 'checkerboardMedium',
-  checkerboardLarge = 'checkerboardLarge',
-}
+export type CheckerboardSize = 'checkerboardNone' | 'checkerboardSmall' | 'checkerboardMedium' | 'checkerboardLarge'
 
 export interface PolicyEnum {
   _enum: 'policy'
   _value: Policy
 }
 
-export enum Policy {
-  off = 'off',
-  preserve = 'preserve',
-  convert = 'convert',
-}
+export type Policy = 'off' | 'preserve' | 'convert'

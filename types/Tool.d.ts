@@ -49,12 +49,11 @@ export interface MarqueeDescriptor {
   $FxHU: number
 }
 
-export enum SelectionMode {
-  new = 1,
-  add = 2,
-  subtract = 3,
-  intersect = 4,
-}
+export type SelectionMode =
+  1 | // new
+  2 | // add
+  3 | // subtract
+  4   // intersect
 
 export interface SelectionToolOptionsDescriptor extends CTODesc {
   contiguous: boolean
@@ -136,11 +135,7 @@ export interface CropAspectRatioModeEnum {
   _value: CropAspectRatioMode
 }
 
-export enum CropAspectRatioMode {
-  pureAspectRatio = 'pureAspectRatio',
-  targetSize = 'targetSize',
-  originalProportions = 'originalProportions',
-}
+export type CropAspectRatioMode = 'pureAspectRatio' | 'targetSize' | 'originalProportions'
 
 export interface CropOptionsDescriptor {
   _obj: '$CrOC'
@@ -196,10 +191,7 @@ export interface FramedGroupShapeEnum {
   _value: FramedGroupShape
 }
 
-export enum FramedGroupShape {
-  rect = '$Rect',
-  oval = '$Oval',
-}
+export type FramedGroupShape = '$Rect' | '$Oval'
 
 export interface FpoCDescriptor {
   _obj: '$FpoC'
@@ -230,21 +222,17 @@ export interface SpotHealingMethodEnum {
   _value: SpotHealingMethod
 }
 
-export enum SpotHealingMethod {
-  contentAware = '$CntW',
-  createTexture = '$CrtT',
-  proximityMatch = '$PrxM',
-}
+export type SpotHealingMethod = 
+  '$CntW' | // contentAware
+  '$CrtT' | // createTexture
+  '$PrxM'   // proximityMatch
 
 export interface SmpTEnum {
   _enum: '$SmpT'
   _value: SmpT
 }
 
-export enum SmpT {
-  $SrcN = '$SrcN',
-  // TODO: more?
-}
+export type SmpT = '$SrcN'  // TODO: more?
 
 export interface SpotHealingBrushToolOptionsDescriptor
   extends MagicStampToolOptionsDescriptor {
@@ -267,10 +255,7 @@ export interface HealingDirectionEnum {
   _value: HealingDirection
 }
 
-export enum HealingDirection {
-  healFromDest2Src = 'healFromDest2Src',
-  healFromSrc2Dest = 'healFromSrc2Dest',
-}
+export type HealingDirection = 'healFromDest2Src' | 'healFromSrc2Dest'
 
 export interface PatchSelectionOptionsDescriptor extends CTODesc {
   pattern: PatternDescriptor
@@ -558,45 +543,28 @@ export interface GeometryToolModeEnum {
   _value: GeometryToolMode
 }
 
-export enum GeometryToolMode {
-  path = 'path',
-  shape = 'shape',
-  pixels = 'pixels',
-}
+export type GeometryToolMode = 'path' | 'shape' | 'pixels'
 
 export interface StrokeStyleLineCapTypeEnum {
   _enum: 'strokeStyleLineCapType'
   _value: StrokeStyleLineCapType
 }
 
-export enum StrokeStyleLineCapType {
-  strokeStyleRoundCap = 'strokeStyleRoundCap',
-  strokeStyleButtCap = 'strokeStyleButtCap',
-  strokeStyleSquareCap = 'strokeStyleSquareCap',
-}
+export type StrokeStyleLineCapType = 'strokeStyleRoundCap' | 'strokeStyleButtCap' | 'strokeStyleSquareCap'
 
 export interface StrokeStyleLineJoinTypeEnum {
   _enum: 'strokeStyleLineJoinType'
   _value: StrokeStyleLineJoinType
 }
 
-export enum StrokeStyleLineJoinType {
-  strokeStyleBevelJoin = 'strokeStyleBevelJoin',
-  strokeStyleMiterJoin = 'strokeStyleMiterJoin',
-  strokeStyleRoundJoin = 'strokeStyleRoundJoin',
-}
+export type StrokeStyleLineJoinType = 'strokeStyleBevelJoin' | 'strokeStyleMiterJoin' | 'strokeStyleRoundJoin'
 
 export interface StrokeStyleLineAlignmentEnum {
   _enum: 'strokeStyleLineAlignment'
   _value: StrokeStyleLineAlignment
 }
 
-export enum StrokeStyleLineAlignment {
-  outside = 'strokeStyleAlignOutside',
-  inside = 'strokeStyleAlignInside',
-  center = 'strokeStyleAlignCenter',
-}
-
+export type StrokeStyleLineAlignment = 'strokeStyleAlignOutside' | 'strokeStyleAlignInside' | 'strokeStyleAlignCenter'
 
 export interface StrokStyleDescriptor {
   _obj: 'strokeStyle'
@@ -825,79 +793,78 @@ export interface ToolEnum {
   _value: 'targetEnum'
 }
 
-export enum Tool {
-  moveTool = 'moveTool',
-  artboardTool = 'artboardTool',
-  marqueeRectTool = 'marqueeRectTool',
-  marqueeEllipTool = 'marqueeEllipTool',
-  marqueeSingleRowTool = 'marqueeSingleRowTool',
-  marqueeSingleColumnTool = 'marqueeSingleColumnTool',
-  polySelTool = 'polySelTool',
-  lassoTool = 'lassoTool',
-  magneticLassoTool = 'magneticLassoTool',
-  quickSelectTool = 'quickSelectTool',
-  magicLassoTool = 'magicLassoTool',
-  magicWandTool = 'magicWandTool',
-  cropTool = 'cropTool',
-  perspectiveCropTool = 'perspectiveCropTool',
-  sliceTool = 'sliceTool',
-  sliceSelectTool = 'sliceSelectTool',
-  framedGroupTool = 'framedGroupTool',
-  eyedropperTool = 'eyedropperTool',
-  threeDMaterialSelectTool = '3DMaterialSelectTool',
-  colorSamplerTool = 'colorSamplerTool',
-  rulerTool = 'rulerTool',
-  textAnnotTool = 'textAnnotTool',
-  countTool = 'countTool',
-  patchSelection = 'patchSelection',
-  spotHealingBrushTool = 'spotHealingBrushTool',
-  magicStampTool = 'magicStampTool',
-  recomposeSelection = 'recomposeSelection',
-  redEyeTool = 'redEyeTool',
-  paintbrushTool = 'paintbrushTool',
-  pencilTool = 'pencilTool',
-  colorReplacementBrushTool = 'colorReplacementBrushTool',
-  wetBrushTool = 'wetBrushTool',
-  cloneStampTool = 'cloneStampTool',
-  patternStampTool = 'patternStampTool',
-  historyBrushTool = 'historyBrushTool',
-  artBrushTool = 'artBrushTool',
-  eraserTool = 'eraserTool',
-  backgroundEraserTool = 'backgroundEraserTool',
-  magicEraserTool = 'magicEraserTool',
-  gradientTool = 'gradientTool',
-  bucketTool = 'bucketTool',
-  threeDMaterialDropTool = '3DMaterialDropTool',
-  blurTool = 'blurTool',
-  sharpenTool = 'sharpenTool',
-  smudgeTool = 'smudgeTool',
-  dodgeTool = 'dodgeTool',
-  burnInTool = 'burnInTool',
-  saturationTool = 'saturationTool',
-  penTool = 'penTool',
-  freeformPenTool = 'freeformPenTool',
-  curvaturePenTool = 'curvaturePenTool',
-  addKnotTool = 'addKnotTool',
-  deleteKnotTool = 'deleteKnotTool',
-  convertKnotTool = 'convertKnotTool',
-  typeCreateOrEditTool = 'typeCreateOrEditTool',
-  typeVerticalCreateOrEditTool = 'typeVerticalCreateOrEditTool',
-  typeVerticalCreateMaskTool = 'typeVerticalCreateMaskTool',
-  typeCreateMaskTool = 'typeCreateMaskTool',
-  pathComponentSelectTool = 'pathComponentSelectTool',
-  directSelectTool = 'directSelectTool',
-  rectangleTool = 'rectangleTool',
-  roundedRectangleTool = 'roundedRectangleTool',
-  ellipseTool = 'ellipseTool',
-  triangleTool = 'triangleTool',
-  polygonTool = 'polygonTool',
-  lineTool = 'lineTool',
-  customShapeTool = 'customShapeTool',
-  handTool = 'handTool',
-  rotateTool = 'rotateTool',
-  zoomTool = 'zoomTool',
-  editToolbar = 'editToolbar',
-}
+export type Tool =
+  'moveTool' |
+  'artboardTool' |
+  'marqueeRectTool' |
+  'marqueeEllipTool' |
+  'marqueeSingleRowTool' |
+  'marqueeSingleColumnTool' |
+  'polySelTool' |
+  'lassoTool' |
+  'magneticLassoTool' |
+  'quickSelectTool' |
+  'magicLassoTool' |
+  'magicWandTool' |
+  'cropTool' |
+  'perspectiveCropTool' |
+  'sliceTool' |
+  'sliceSelectTool' |
+  'framedGroupTool' |
+  'eyedropperTool' |
+  '3DMaterialSelectTool' |
+  'colorSamplerTool' |
+  'rulerTool' |
+  'textAnnotTool' |
+  'countTool' |
+  'patchSelection' |
+  'spotHealingBrushTool' |
+  'magicStampTool' |
+  'recomposeSelection' |
+  'redEyeTool' |
+  'paintbrushTool' |
+  'pencilTool' |
+  'colorReplacementBrushTool' |
+  'wetBrushTool' |
+  'cloneStampTool' |
+  'patternStampTool' |
+  'historyBrushTool' |
+  'artBrushTool' |
+  'eraserTool' |
+  'backgroundEraserTool' |
+  'magicEraserTool' |
+  'gradientTool' |
+  'bucketTool' |
+  '3DMaterialDropTool' |
+  'blurTool' |
+  'sharpenTool' |
+  'smudgeTool' |
+  'dodgeTool' |
+  'burnInTool' |
+  'saturationTool' |
+  'penTool' |
+  'freeformPenTool' |
+  'curvaturePenTool' |
+  'addKnotTool' |
+  'deleteKnotTool' |
+  'convertKnotTool' |
+  'typeCreateOrEditTool' |
+  'typeVerticalCreateOrEditTool' |
+  'typeVerticalCreateMaskTool' |
+  'typeCreateMaskTool' |
+  'pathComponentSelectTool' |
+  'directSelectTool' |
+  'rectangleTool' |
+  'roundedRectangleTool' |
+  'ellipseTool' |
+  'triangleTool' |
+  'polygonTool' |
+  'lineTool' |
+  'customShapeTool' |
+  'handTool' |
+  'rotateTool' |
+  'zoomTool' |
+  'editToolbar'
 
 export interface VectorToolSettingsDescriptor {
   _obj: 'toolPreset'

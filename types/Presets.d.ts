@@ -54,12 +54,7 @@ export interface SizeEnum {
   _value: Size
 }
 
-export enum Size {
-  none = 'none',
-  small = 'small',
-  medium = 'medium',
-  large = 'large',
-}
+export type Size = 'none' | 'small' | 'medium' | 'large'
 
 export interface LocaleInfo {
   decimalPoint: ',' | '.'

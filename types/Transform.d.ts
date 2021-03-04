@@ -26,25 +26,23 @@ export interface WarpStyleEnum {
   _value: WarpStyle
 }
 
-export enum WarpStyle {
-  warpNone = 'warpNone',
-  warpArc = 'warpArc',
-  warpArcLower = 'warpArcLower',
-  warpArcUpper = 'warpArcUpper',
-  warpArch = 'warpArch',
-  warpBulge = 'warpBulge',
-  warpShellLower = 'warpShellLower',
-  warpShellUpper = 'warpShellUpper',
-  warpFlag = 'warpFlag',
-  warpRave = 'warpRave',
-  warpFish = 'warpFish',
-  warpRize = 'warpRize',
-  warpFisheye = 'warpFisheye',
-  warpInflate = 'warpInflate',
-  warpSqueeze = 'warpSqueeze',
-  warpTwist = 'warpTwist'
-}
-
+export type WarpStyle =
+  'warpNone' |
+  'warpArc' |
+  'warpArcLower' |
+  'warpArcUpper' |
+  'warpArch' |
+  'warpBulge' |
+  'warpShellLower' |
+  'warpShellUpper' |
+  'warpFlag' |
+  'warpRave' |
+  'warpFish' |
+  'warpRize' |
+  'warpFisheye' |
+  'warpInflate' |
+  'warpSqueeze' |
+  'warpTwist'
 
 export interface RationalPointList {
   _objList: 'rationalPoint'

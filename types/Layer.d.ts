@@ -9,22 +9,21 @@ import { TextKeyDescriptor } from "./TextKey";
 import { TransformMatrixDescriptor } from "./Transform";
 import { AngleValue, PixelValue } from "./Unit";
 
-export enum LayerKind {
-  any = 0,
-  pixel = 1,
-  adjustment = 2,
-  text = 3,
-  vector = 4,
-  smartObject = 5,
-  video = 6,
-  group = 7,
-  threeD = 8,
-  gradient = 9,
-  pattern = 10,
-  solidColor = 11,
-  background = 12,
-  groupEnd = 13
-}
+export type LayerKind =
+  0 | // any
+  1 | // pixel
+  2 | // adjustment
+  3 | // text
+  4 | // vector
+  5 | // smartObject
+  6 | // video
+  7 | // group
+  8 | // threeD
+  9 | // gradient
+  10 | // pattern
+  11 | // solidColor
+  12 | // background
+  13  // groupEnd
 
 
 export interface LayerDescriptor {
@@ -92,11 +91,7 @@ export interface LayerSectionTypeEnum {
   _value: LayerSectionType,
 }
 
-export enum LayerSectionType {
-  layerSectionContent = 'layerSectionContent',
-  layerSectionStart = 'layerSectionStart',
-  layerSectionEnd = 'layerSectionEnd',
-}
+export type LayerSectionType = 'layerSectionContent' | 'layerSectionStart' | 'layerSectionEnd'
 
 export interface LayerLockingDescriptor {
   _obj: 'layerLocking'

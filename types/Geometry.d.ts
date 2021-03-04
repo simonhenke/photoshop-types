@@ -5,20 +5,9 @@ export interface AlignmentEnum {
   _value: Alignment
 }
 
-export enum Alignment {
-  left = 'left',
-  center = 'center',
-  right = 'right',
-  justifyLeft = 'justifyLeft',
-  justifyCenter = 'justifyCenter',
-  justifyRight = 'justifyRight',
-  justifyAll = 'justifyAll',
-}
+export type Alignment = 'left' |'center' |'right' |'justifyLeft' |'justifyCenter' |'justifyRight' |'justifyAll'
 
-export enum Direction {
-  vertical = 'vertical',
-  horizontal = 'horizontal',
-}
+export type Direction = 'vertical' | 'horizontal'
 
 export interface UVRectangleDescriptor<UV extends UnitValue = UnitValue> extends UVTopRightBottomLeft<UV> {
   _obj: 'rectangle'
@@ -57,10 +46,7 @@ export interface OrientationEnum {
   _value: Orientation
 }
 
-export enum Orientation {
-  horizontal = 'horizontal',
-  vertical = 'vertical'
-}
+export type Orientation = 'horizontal' | 'vertical'
 
 export interface RectangleDescriptor extends TopRightBottomLeft {
   _obj: 'rectangle'
@@ -78,15 +64,8 @@ export type CornersArray = [
   number, number, number, number
 ]
 
-export enum HorizontalLocation {
-  left = 'left',
-  center = 'center',
-  right = 'right',
-}
+export type HorizontalLocation = 'left' | 'center' | 'right'
 
-export enum VerticalLocation {
-  top = 'top',
-  center = 'center',
-  bottomEnum = 'bottomEnum',
-}
+export type VerticalLocation = 'top' | 'center' | 'bottomEnum'
+
 

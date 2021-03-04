@@ -1,10 +1,4 @@
 
-export enum DisplacementMap {
-  stretchToFit = 'stretchToFit',
-  tile = 'tile',
-}
+export type DisplacementMap = 'stretchToFit' | 'tile'
 
-export enum UndefinedArea {
-  repeatEdgePixels = 'repeatEdgePixels',
-  wrapAround = 'wrapAround',
-}
+export type UndefinedArea = 'repeatEdgePixels' | 'wrapAround'

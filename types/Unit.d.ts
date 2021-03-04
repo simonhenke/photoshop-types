@@ -1,26 +1,24 @@
-export enum Unit {
-  angleUnit = 'angleUnit',
-  densityUnit = 'densityUnit',
-  distanceUnit = 'distanceUnit',
-  percentUnit = 'percentUnit',
-  pixelsUnit = 'pixelsUnit',
-  pointsUnit = 'pointsUnit',
-  millimetersUnit = 'millimetersUnit',
-  centimetersUnit = 'centimetersUnit',
-  inchesUnit = 'inchesUnit',
-  picasUnit = 'picasUnit',
-  noneUnit = 'noneUnit',
-}
+export type Unit =
+  'angleUnit' |
+  'densityUnit' |
+  'distanceUnit' |
+  'percentUnit' |
+  'pixelsUnit' |
+  'pointsUnit' |
+  'millimetersUnit' |
+  'centimetersUnit' |
+  'inchesUnit' |
+  'picasUnit' |
+  'noneUnit'
 
-export enum RulerUnit {
-  rulerPixels = 'rulerPixels',
-  rulerPoints = 'rulerPoints',
-  rulerInches = 'rulerInches',
-  rulerCm = 'rulerCm',
-  rulerMm = 'rulerMm',
-  rulerPercent = 'rulerPercent',
-  rulerPicas = 'rulerPicas',
-}
+export type RulerUnit =
+  'rulerPixels' |
+  'rulerPoints' |
+  'rulerInches' |
+  'rulerCm' |
+  'rulerMm' |
+  'rulerPercent' |
+  'rulerPicas'
 
 export interface RulerUnitsEnum { 
   _enum: 'rulerUnits'
@@ -38,45 +36,45 @@ export interface UnitValue {
 }
 
 export interface AngleValue extends UnitValue {
-  _unit: Unit.angleUnit
+  _unit: 'angleUnit'
 }
 
 export interface DensityValue extends UnitValue {
-  _unit: Unit.densityUnit
+  _unit: 'densityUnit'
 }
 
 export interface DistanceValue extends UnitValue {
-  _unit: Unit.distanceUnit
+  _unit: 'distanceUnit'
 }
 
 export interface PercentValue extends UnitValue {
-  _unit: Unit.percentUnit
+  _unit: 'percentUnit'
 }
 
 export interface PixelValue extends UnitValue {
-  _unit: Unit.pixelsUnit
+  _unit: 'pixelsUnit'
 }
 
 export interface PointValue extends UnitValue {
-  _unit: Unit.pointsUnit
+  _unit: 'pointsUnit'
 }
 
 export interface MillimeterValue extends UnitValue {
-  _unit: Unit.millimetersUnit
+  _unit: 'millimetersUnit'
 }
 
 export interface CentimeterValue extends UnitValue {
-  _unit: Unit.centimetersUnit
+  _unit: 'centimetersUnit'
 }
 
 export interface InchValue extends UnitValue {
-  _unit: Unit.inchesUnit
+  _unit: 'inchesUnit'
 }
 
 export interface PicaValue extends UnitValue {
-  _unit: Unit.picasUnit
+  _unit: 'picasUnit'
 }
 
 export interface NoneValue extends UnitValue {
-  _unit: Unit.noneUnit
+  _unit: 'noneUnit'
 }

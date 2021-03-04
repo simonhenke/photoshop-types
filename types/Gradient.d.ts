@@ -6,21 +6,14 @@ export interface GradientFormEnum {
   _value: GradientForm
 }
 
-export enum GradientForm {
-  customStops = 'customStops',
-  colorNoise = 'colorNoise',
-}
+export type GradientForm = 'customStops' | 'colorNoise'
 
 export interface ColorStopTypeEnum {
   _enum: 'colorStopType'
   _value: ColorStopType
 }
 
-export enum ColorStopType {
-  userStop = 'userStop',
-  foregroundColor = 'foregroundColor',
-  backgroundColor = 'backgroundColor',
-}
+export type ColorStopType = 'userStop' | 'foregroundColor' | 'backgroundColor'
 
 export interface ColorStopDescriptor {
   _obj: 'colorStop',
@@ -48,7 +41,7 @@ export interface GenericGradientProperties {
 export interface NoiseGradientDescriptor extends GenericGradientProperties{
   gradientForm: {
     _enum: 'gradientForm'
-    _value: GradientForm.colorNoise
+    _value: 'colorNoise'
   }
   showTransparency?: boolean
   vectorColor?: boolean
@@ -62,7 +55,7 @@ export interface NoiseGradientDescriptor extends GenericGradientProperties{
 export interface CustomStopGradientDescriptor extends GenericGradientProperties {
   gradientForm: {
     _enum: 'gradientForm'
-    _value: GradientForm.customStops
+    _value: 'customStops'
   }
   interfaceIconFrameDimmed?: number
   colors?: ColorStopDescriptor[]
@@ -74,18 +67,6 @@ export interface GradientTypeEnum {
   _value: GradientType,
 }
 
-export enum GradientType {
-  linear = 'linear',
-  radial = 'radial',
-  angle = 'angle',
-  reflected = 'reflected',
-  diamond = 'diamond',
-}
+export type GradientType = 'linear' | 'radial' | 'angle' | 'reflected' | 'diamond'
 
-export enum GradientTypeNumeric {
-  linear = 0,
-  radial = 1,
-  angle = 2,
-  reflected = 3,
-  diamond = 4,
-}
+export type GradientTypeNumeric = 0 | 1 | 2 | 3 | 4

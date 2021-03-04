@@ -48,34 +48,21 @@ export interface BevelTechniqueEnum {
   _value: BevelTechnique
 }
 
-export enum BevelTechnique {
-  softMatte = 'softMatte',
-  preciseMatte = 'preciseMatte',
-  slopeLimitMatte = 'slopeLimitMatte',
-}
+export type BevelTechnique = 'softMatte' | 'preciseMatte' | 'slopeLimitMatte' 
 
 export interface BevelEmbossStyleEnum {
   _enum: 'bevelEmbossStyle'
   _value: BevelEmbossStyle
 }
 
-export enum BevelEmbossStyle {
-  innerBevel = 'innerBevel',
-  outerBevel = 'outerBevel',
-  emboss = 'emboss',
-  pillowEmboss = 'pillowEmboss',
-  strokeEmboss = 'strokeEmboss',
-}
+export type BevelEmbossStyle = 'innerBevel' | 'outerBevel' | 'emboss' | 'pillowEmboss' | 'strokeEmboss'
 
 export interface BevelEmbossStampStyleEnum {
   _enum: 'bevelEmbossStampStyle'
   _value: BevelEmbossStampStyle
 }
 
-export enum BevelEmbossStampStyle {
-  stampOut = 'stampOut',
-  in = 'in',
-}
+export type BevelEmbossStampStyle = 'stampOut' | 'in'
 
 export interface BevelEmbossDescriptor {
   _obj: 'bevelEmboss'
@@ -133,21 +120,18 @@ export interface InnerGlowSourceTypeEnum {
   _value: InnerGlowSourceType
 }
 
-export enum InnerGlowSourceType {
-  edgeGlow = 'edgeGlow',
-  centerGlow = 'centerGlow',
-}
+export type InnerGlowSourceType = 'edgeGlow' | 'centerGlow'
 
 export interface FrameFXSolidFillDescriptor extends FrameFXDescriptorBase {
-  paintType: FrameFillEnum<FrameFill.solidFill>
+  paintType: FrameFillEnum<'solidFill'>
 }
 
 export interface FrameFXGradientFillDescriptor extends FrameFXDescriptorBase, GradientFillProperties {
-  paintType: FrameFillEnum<FrameFill.gradientFill>
+  paintType: FrameFillEnum<'gradientFill'>
 }
 
 export interface FrameFXPatternFillDescriptor extends FrameFXDescriptorBase, PatternFillProperties {
-  paintType: FrameFillEnum<FrameFill.pattern>
+  paintType: FrameFillEnum<'pattern'>
 }
 
 export interface FrameFillEnum<FF extends FrameFill = FrameFill> {
@@ -155,22 +139,14 @@ export interface FrameFillEnum<FF extends FrameFill = FrameFill> {
   _value: FF
 }
 
-export enum FrameFill {
-  solidFill = 'solidFill',
-  gradientFill = 'gradientFill',
-  pattern = 'pattern',
-}
+export type FrameFill = 'solidFill' | 'gradientFill' | 'pattern' 
 
 export interface FrameStyleEnum {
   _enum: 'frameStyle'
   _value: FrameStyle
 }
 
-export enum FrameStyle {
-  insetFrame = 'insetFrame',
-  outsetFrame = 'outsetFrame',
-  centeredFrame = 'centeredFrame',
-}
+export type FrameStyle = 'insetFrame' | 'outsetFrame' | 'centeredFrame' 
 
 export type FrameFXDescriptor =
   FrameFXSolidFillDescriptor |
@@ -269,10 +245,7 @@ export interface MatteTechniqueEnum {
   _value: MatteTechnique
 }
 
-export enum MatteTechnique {
-  softMatte = 'softMatte',
-  preciseMatte = 'preciseMatte',
-}
+export type MatteTechnique = 'softMatte' | 'preciseMatte'
 
 export interface ShapeCurveTypeDescriptor {
   _obj: 'shapeCurveType'
@@ -280,20 +253,19 @@ export interface ShapeCurveTypeDescriptor {
   curve?: CurvePointDescriptor[]
 }
 
-export enum ShapeCurveName {
-  Linear = 'Linear',
-  Cone = '$$$/Contours/Defaults/Cone=Cone',
-  ConeInverted = '$$$/Contours/Defaults/ConeInverted=Cone - Inverted',
-  CoveDeep = '$$$/Contours/Defaults/CoveDeep=Cove - Deep',
-  CoveShallow = '$$$/Contours/Defaults/CoveShallow=Cove - Shallow',
-  Gaussian = '$$$/Contours/Defaults/Gaussian=Gaussian',
-  HalfRound = '$$$/Contours/Defaults/HalfRound=Half Round',
-  Ring = '$$$/Contours/Defaults/Ring=Ring',
-  RingDouble = '$$$/Contours/Defaults/DoubleRing=Ring - Double',
-  RollingSlopeDescending = '$$$/Contours/Defaults/RollingSlopeDescending=Rolling Slope - Descending',
-  RoundedSteps = '$$$/Contours/Defaults/RoundedSteps=Rounded Steps',
-  SawTooth1 = '$$$/Contours/Defaults/Sawtooth1=Sawtooth 1',
-}
+export type ShapeCurveName =
+  'Linear' |
+  '$$$/Contours/Defaults/Cone=Cone' |
+  '$$$/Contours/Defaults/ConeInverted=Cone - Inverted' |
+  '$$$/Contours/Defaults/CoveDeep=Cove - Deep' |
+  '$$$/Contours/Defaults/CoveShallow=Cove - Shallow' |
+  '$$$/Contours/Defaults/Gaussian=Gaussian' |
+  '$$$/Contours/Defaults/HalfRound=Half Round' |
+  '$$$/Contours/Defaults/Ring=Ring' |
+  '$$$/Contours/Defaults/DoubleRing=Ring - Double' | 
+  '$$$/Contours/Defaults/RollingSlopeDescending=Rolling Slope - Descending' | 
+  '$$$/Contours/Defaults/RoundedSteps=Rounded Steps' |
+  '$$$/Contours/Defaults/Sawtooth1=Sawtooth 1' 
 
 export interface CurvePointDescriptor {
   _obj: 'curvePoint',

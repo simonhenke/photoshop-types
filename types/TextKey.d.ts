@@ -34,188 +34,147 @@ export interface FontCapsEnum {
   _value: FontCaps,
 }
 
-export enum FontCaps {
-  normal = 'normal',
-  smallCaps = 'smallCaps',
-  allCaps = 'allCaps'
-}
+export type FontCaps = 'normal' | 'smallCaps' | 'allCaps'
 
 export interface DigiSetEnum {
   _enum: 'digitSet',
   _value: DigiSet,
 }
 
-export enum DigiSet {
-  defaultDigits = 'defaultDigits',
-  arabicDigits = 'arabicDigits',
-  farsiDigits = 'farsiDigits',
-  hindiDigits = 'hindiDigits',
-}
+export type DigiSet = 'defaultDigits' | 'arabicDigits' | 'farsiDigits' | 'hindiDigits'
 
 export interface KashidasEnum {
   _enum: 'kashidas',
   _value: Kashidas,
 }
 
-export enum Kashidas {
-  kashidaDefault = 'kashidaDefault'
-}
+export type Kashidas = 'kashidaDefault' // TODO: more?
 
 export interface BaselineEnum {
   _enum: 'baseline',
   _value: Baseline,
 }
 
-export enum Baseline {
-  normal = 'normal',
-  superScript = 'superScript',
-  subScript = 'subScript',
-}
+export type Baseline = 'normal' | 'superScript' | 'subScript'
 
 export interface OtBaselineEnum {
   _enum: 'otbaseline',
   _value: OtBaseline,
 }
 
-export enum OtBaseline {
-  normal = 'normal',
-  superScript = 'superScript',
-  subScript = 'subScript',
-  numerator = 'numerator',
-  denominator = 'denominator',
-}
+export type OtBaseline = 'normal' | 'superScript' | 'subScript' | 'numerator' | 'denominator'
 
 export interface StrikeThroughEnum {
   _enum: 'strikethrough',
   _value: StrikeThrough,
 }
 
-export enum StrikeThrough {
-  xHeightStrikethroughOn = 'xHeightStrikethroughOn',
-  xHeightStrikethroughOff = 'xHeightStrikethroughOff',
-}
+export type StrikeThrough = 'xHeightStrikethroughOn' | 'xHeightStrikethroughOff'
 
 export interface UnderlineEnum {
   _enum: 'underline',
   _value: Underline,
 }
 
-export enum Underline {
-  underlineOnLeftInVertical = 'underlineOnLeftInVertical',
-  underlineOnRightInVertical = 'underlineOnRightInVertical',
-  underlineOff = 'underlineOff'
-}
+export type Underline = 'underlineOnLeftInVertical' | 'underlineOnRightInVertical' | 'underlineOff'
 
 export interface FigureStyleEnum {
   _enum: 'figureStyle',
   _value: FigureStyle,
 }
 
-export enum FigureStyle {
-  normal = 'normal',
-  tabularLining = 'tabularLining',
-  proportionalOldStyle = 'proportionalOldStyle',
-  proportionalLining = 'proportionalLining',
-  tabularOldStyle = 'tabularOldStyle',
-}
+export type FigureStyle = 'normal' | 'tabularLining' | 'proportionalOldStyle' | 'proportionalLining' | 'tabularOldStyle'
 
 export interface BaselineDirectionEnum {
   _enum: 'baselineDirection',
   _value: BaselineDirection,
 }
 
-export enum BaselineDirection {
-  withStream = 'withStream'
-  // TODO: more?
-}
+export type BaselineDirection = 'withStream' // TODO: more?
 
 export interface TextLanguageEnum {
   _enum: 'textLanguage',
   _value: TextLanguage,
 }
 
-export enum TextLanguage {
-  oldGermanLanguage = 'oldGermanLanguage',
-  greekLanguage = 'greekLanguage',
-  hungarianLanguage = 'hungarianLanguage',
-  icelandicLanguage = 'icelandicLanguage',
-  italianLanguage = 'italianLanguage',
-  japaneseLanguage = 'japaneseLanguage',
-  croatianLanguage = 'croatianLanguage',
-  latvianLanguage = 'latvianLanguage',
-  lithuanianLanguage = 'lithuanianLanguage',
-  nynorskNorwegianLanguage = 'nynorskNorwegianLanguage',
-  polishLanguage = 'polishLanguage',
-  romanianLanguage = 'romanianLanguage',
-  rumanianLanguage = 'rumanianLanguage',
-  russianLanguage = 'russianLanguage',
-  serbianLanguage = 'serbianLanguage',
-  slovakLanguage = 'slovakLanguage',
-  slovenianLanguage = 'slovenianLanguage',
-  spanishLanguage = 'spanishLanguage',
-  standardFrenchLanguage = 'standardFrenchLanguage',
-  standardGermanLanguage = 'standardGermanLanguage',
-  germanLanguageReformed1996 = 'germanLanguageReformed1996',
-  standardPortugueseLanguage = 'standardPortugueseLanguage',
-  swedishLanguage = 'swedishLanguage',
-  swissGermanLanguage = 'swissGermanLanguage',
-  swissGermanLanguageOldRules = 'swissGermanLanguageOldRules',
-  turkishLanguage = 'turkishLanguage',
-  ukenglishLanguage = 'ukenglishLanguage',
-  ukranianLanguage = 'ukranianLanguage',
-  arabicLanguage = 'arabicLanguage',
-  hebrewLanguage = 'hebrewLanguage',
-  bokmalNorwegianLanguage = 'bokmalNorwegianLanguage',
-  brazilianPortugueseLanguage = 'brazilianPortugueseLanguage',
-  bulgarianLanguage = 'bulgarianLanguage',
-  canadianFrenchLanguage = 'canadianFrenchLanguage',
-  canadianEnglishLanguage = 'canadianEnglishLanguage',
-  catalanLanguage = 'catalanLanguage',
-  chineseLanguage = 'chineseLanguage',
-  czechLanguage = 'czechLanguage',
-  danishLanguage = 'danishLanguage',
-  dutchLanguage = 'dutchLanguage',
-  kdutchLanguageOldRules = 'kdutchLanguageOldRules',
-  englishLanguage = 'englishLanguage',
-  estonianLanguage = 'estonianLanguage',
-  finnishLanguage = 'finnishLanguage',
-}
+export type TextLanguage =
+  'oldGermanLanguage' |
+  'greekLanguage' |
+  'hungarianLanguage' |
+  'icelandicLanguage' |
+  'italianLanguage' |
+  'japaneseLanguage' |
+  'croatianLanguage' |
+  'latvianLanguage' |
+  'lithuanianLanguage' |
+  'nynorskNorwegianLanguage' |
+  'polishLanguage' |
+  'romanianLanguage' |
+  'rumanianLanguage' |
+  'russianLanguage' |
+  'serbianLanguage' |
+  'slovakLanguage' |
+  'slovenianLanguage' |
+  'spanishLanguage' |
+  'standardFrenchLanguage' |
+  'standardGermanLanguage' |
+  'germanLanguageReformed1996' |
+  'standardPortugueseLanguage' |
+  'swedishLanguage' |
+  'swissGermanLanguage' |
+  'swissGermanLanguageOldRules' |
+  'turkishLanguage' |
+  'ukenglishLanguage' |
+  'ukranianLanguage' |
+  'arabicLanguage' |
+  'hebrewLanguage' |
+  'bokmalNorwegianLanguage' |
+  'brazilianPortugueseLanguage' |
+  'bulgarianLanguage' |
+  'canadianFrenchLanguage' |
+  'canadianEnglishLanguage' |
+  'catalanLanguage' |
+  'chineseLanguage' |
+  'czechLanguage' |
+  'danishLanguage' |
+  'dutchLanguage' |
+  'kdutchLanguageOldRules' |
+  'englishLanguage' |
+  'estonianLanguage' |
+  'finnishLanguage'
 
 export interface JapaneseAlternateEnum {
   _enum: 'japaneseAlternate'
   _value: JapaneseAlternate
 }
 
-export enum JapaneseAlternate {
-  defaultForm = 'defaultForm',
-  traditionalForm = 'traditionalForm',
-  expertForm = 'expertForm',
-  JIS78Form = 'JIS78Form',
-  JIS83Form = 'JIS83Form',
-  halfWidthForm = 'halfWidthForm',
-  thirdWidthForm = 'thirdWidthForm',
-  quarterWidthForm = 'quarterWidthForm',
-  fullWidthForm = 'fullWidthForm',
-  proportionalWidthForm = 'proportionalWidthForm',
-
+export type JapaneseAlternate =
+  'defaultForm' |
+  'traditionalForm' |
+  'expertForm' |
+  'JIS78Form' |
+  'JIS83Form' |
+  'halfWidthForm' |
+  'thirdWidthForm' |
+  'quarterWidthForm' |
+  'fullWidthForm' |
+  'proportionalWidthForm'
   // expertForm?
   // traditionalForm?
   // TODO: more?
-}
 
 export interface GridAlignmentEnum {
   _enum: 'gridAlignment'
   _value: GridAlignment
 }
 
-export enum GridAlignment {
-  roman = 'roman',
-  bottom = 'bottom',
-  ifcbottom = 'icfbottom',
-  center = 'center',
-  icftop = 'icftop',
-  top = 'top',
-}
+export type GridAlignment =
+  'roman' |
+  'bottom' |
+  'icfbottom' |
+  'center' |
+  'icftop' |
+  'top'
 
 export interface TextStyleDescriptor {
   _obj: "textStyle"
@@ -280,73 +239,50 @@ export interface AutoKernEnum {
   _value: AutoKern
 }
 
-export enum AutoKern {
-  metricsKern = 'metricsKern',
-  opticalKern = 'opticalKern',
-  manual = 'manual',
-}
+export type AutoKern = 'metricsKern' | 'opticalKern' | 'manual'
 
 export interface DirOverrideEnum {
   _enum: 'dirOverride'
   _value: DirOverride
 }
 
-export enum DirOverride {
-  dirOverrideDefault = 'dirOverrideDefault',
-  dirOverrideLTR = 'dirOverrideLTR',
-  dirOverrideRTL = 'dirOverrideRTL'
-}
+export type DirOverride = 'dirOverrideDefault' | 'dirOverrideLTR' | 'dirOverrideRTL'
 
 export interface DiacVPosEnum {
   _enum: 'diacVPos'
   _value: DiacVPos
 }
 
-export enum DiacVPos {
-  diacVPosOpenType = 'diacVPosOpenType',
-  diacVPosOff = 'diacVPosOff',
-  diacVPosLoose = 'diacVPosLoose',
-  diacVPosMedium = 'diacVPosMedium',
-  diacVPosTight = 'diacVPosTight',
-}
+export type DiacVPos = 'diacVPosOpenType' | 'diacVPosOff' | 'diacVPosLoose' | 'diacVPosMedium' | 'diacVPosTight'
 
 export interface WariChuJustificationEnum {
   _enum: 'wariChuJustification'
   _value: WariChuJustification
 }
 
-export enum WariChuJustification {
-  wariChuAutoJustify = 'wariChuAutoJustify',
-  wariChuCenterJustify = 'wariChuCenterJustify',
-  wariChuFullJustifyLastLineCenter = 'wariChuFullJustifyLastLineCenter',
-  wariChuFullJustifyLastLineFull = 'wariChuFullJustifyLastLineFull',
-  wariChuFullJustifyLastLineLeft = 'wariChuFullJustifyLastLineLeft',
-  wariChuFullJustifyLastLineRight = 'wariChuFullJustifyLastLineRight',
-  wariChuLeftJustify = 'wariChuLeftJustify',
-  wariChuRightJustify = 'wariChuRightJustify',
-}
+export type WariChuJustification =
+  'wariChuAutoJustify' |
+  'wariChuCenterJustify' |
+  'wariChuFullJustifyLastLineCenter' |
+  'wariChuFullJustifyLastLineFull' |
+  'wariChuFullJustifyLastLineLeft' |
+  'wariChuFullJustifyLastLineRight' |
+  'wariChuLeftJustify' |
+  'wariChuRightJustify'
 
 export interface LineCapEnum {
   _enum: 'lineCap'
   _value: LineCap
 }
 
-export enum LineCap {
-  buttCap = 'buttCap',
-  roundCap = 'roundCap',
-  squareCap = 'squareCap',
-}
+export type LineCap = 'buttCap' | 'roundCap' | 'squareCap'
 
 export interface LineJoinEnum {
   _enum: 'lineJoin'
   _value: LineJoin
 }
 
-export enum LineJoin {
-  miterJoin = 'miterJoin',
-  roundJoin = 'roundJoin',
-  bevelJoin = 'bevelJoin',
-}
+export type LineJoin = 'miterJoin' | 'roundJoin' | 'bevelJoin'
 
 export interface BaseParentTextStyleDescriptor extends TextStyleDescriptor {
   characterRotation: number
@@ -420,66 +356,49 @@ export interface PathTypeEffectEnum {
   _value: PathTypeEffect
 }
 
-export enum PathTypeEffect {
-  rainbowEffect = 'rainbowEffect',
-  // TODO: more?
-}
+export type PathTypeEffect = 'rainbowEffect'  // TODO: more?
 
 export interface PathTypeAlignmentEnum {
   _enum: 'pathTypeAlignment'
   _value: PathTypeAlignment
 }
 
-export enum PathTypeAlignment {
-  baselineAlignment = 'baselineAlignment',
-  centerAlignment = 'centerAlignment',
-}
+export type PathTypeAlignment = 'baselineAlignment' | 'centerAlignment'
 
 export interface PathTypeAlignToEnum {
   _enum: 'pathTypeAlignTo'
   _value: PathTypeAlignTo
 }
 
-export enum PathTypeAlignTo {
-  toPathTop = 'toPathTop',
-  toPathBottom = 'toPathBottom',
-  toPathCenter = 'toPathCenter',
-}
+export type PathTypeAlignTo = 'toPathTop' | 'toPathBottom' | 'toPathCenter'
 
 export interface FramBaselineAlignmentEnum {
   _enum: 'frameBaselineAlignment'
   _value: FramBaselineAlignment
 }
 
-export enum FramBaselineAlignment {
-  alignByAscent = 'alignByAscent',
-  alignByCapHeight = 'alignByCapHeight',
-  alignByLeading = 'alignByLeading',
-  alignByMinimumValueRoman = 'alignByMinimumValueRoman',
-  alignByMinimumValueAsian = 'alignByMinimumValueAsian',
-  alignByXHeight = 'alignByXHeight',
-}
+export type FramBaselineAlignment =
+  'alignByAscent' |
+  'alignByCapHeight' |
+  'alignByLeading' |
+  'alignByMinimumValueRoman' |
+  'alignByMinimumValueAsian' |
+  'alignByXHeight'
+
 
 export interface CharEnum {
   _enum: 'char'
   _value: Char
 }
 
-export enum Char {
-  box = 'box',
-  paint = 'paint', // point/paint bug
-}
+export type Char = 'box' | 'paint'
 
 export interface TextGriddingEnum {
   _enum: 'textGridding'
   _value: TextGridding
 }
 
-export enum TextGridding {
-  none = 'none',
-  round = 'round',
-  systemMetrics = 'systemMetrics',
-}
+export type TextGridding = 'none' | 'round' | 'systemMetrics'
 
 export interface ParagraphStyleRangeDescriptor extends RangePartial {
   _obj: 'paragraphStyleRange'
@@ -512,45 +431,36 @@ export interface BurasagariEnum {
   _value: Burasagari
 }
 
-export enum Burasagari {
-  burasagariNone = 'burasagariNone',
-  burasagariStandard = 'burasagariStandard',
-  burasagariStrong = 'burasagariStrong',
-}
+export type Burasagari = 'burasagariNone' | 'burasagariStandard' | 'burasagariStrong' 
 
 export interface KinsokuSetNameEnum {
   _enum: 'kinsokuSetName'
   _value: KinsokuSetName
 }
 
-export enum KinsokuSetName {
-  None = 'None',
-  Hard = 'Hard',
-  Soft = 'Soft',
-}
+export type KinsokuSetName = 'None' | 'Hard' | 'Soft'
 
 export interface MojiKumiNameEnum {
   _enum: 'mojiKumiName',
   _value: MojiKumiName
 }
 
-export enum MojiKumiName {
-  Photoshop6MojiKumiNone = 'Photoshop6MojiKumiNone',
-  Photoshop6MojiKumiSet1 = 'Photoshop6MojiKumiSet1',
-  Photoshop6MojiKumiSet2 = 'Photoshop6MojiKumiSet2',
-  Photoshop6MojiKumiSet3 = 'Photoshop6MojiKumiSet3',
-  Photoshop6MojiKumiSet4 = 'Photoshop6MojiKumiSet4',
-}
+export type MojiKumiName =
+  'Photoshop6MojiKumiNone' |
+  'Photoshop6MojiKumiSet1' |
+  'Photoshop6MojiKumiSet2' |
+  'Photoshop6MojiKumiSet3' |
+  'Photoshop6MojiKumiSet4'
 
-export enum antiAliasType {
-  antiAliasNone = 'antiAliasNone',
-  antiAliasSharp = 'antiAliasSharp',
-  antiAliasCrisp = 'antiAliasCrisp',
-  antiAliasStrong = 'antiAliasStrong',
-  antiAliasSmooth = 'antiAliasSmooth',
-  antiAliasPlatformLCD = 'antiAliasPlatformLCD',
-  antiAliasPlatformGray = 'antiAliasPlatformGray',
-}
+export type antiAliasType =
+  'antiAliasNone' |
+  'antiAliasSharp' |
+  'antiAliasCrisp' |
+  'antiAliasStrong' |
+  'antiAliasSmooth' |
+  'antiAliasPlatformLCD' |
+  'antiAliasPlatformGray'
+
 
 export interface BoundingBoxDescriptor extends UVTopRightBottomLeft {
   _obj: 'boundingBox'

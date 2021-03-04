@@ -9,114 +9,126 @@ import { UnitValue } from "./Unit";
  * -------------------------------------------------------------------------------------------------
  */
 
-export type PsColor = PsRGBColorSpace | PsCMYKColorSpace | PsHSBColorSpace | LabColorSpace | GrayscaleColorSpace | OpacityColorSpace | BookColorSpace
+export type PsColor =
+  | PsRGBColorSpace
+  | PsCMYKColorSpace
+  | PsHSBColorSpace
+  | LabColorSpace
+  | GrayscaleColorSpace
+  | OpacityColorSpace
+  | BookColorSpace;
 
-export type ColorSpaceKeys = "RGBColor" | "HSBColorClass" | "CMYKColorClass" | "labColor" | "grayscale" | "opacityClass" | "bookColor";
+export type ColorSpaceKeys =
+  | "RGBColor"
+  | "HSBColorClass"
+  | "CMYKColorClass"
+  | "labColor"
+  | "grayscale"
+  | "opacityClass"
+  | "bookColor";
 
 export interface ColorSpace extends BookColorProperties {
-  _obj: ColorSpaceKeys
+  _obj: ColorSpaceKeys;
 }
 
 export interface BookColorProperties {
-  book?: string
-  name?: string
-  bookID?: number
-  bookKey?: any
+  book?: string;
+  name?: string;
+  bookID?: number;
+  bookKey?: any;
 }
 
 export interface BookColorSpace extends ColorSpace {
-  _obj: 'bookColor'
+  _obj: "bookColor";
 }
 
 export interface ColorSpaceEnum {
-  _enum: "colorSpace"
-  _value: ColorSpaceKeys
+  _enum: "colorSpace";
+  _value: ColorSpaceKeys;
 }
 
 export interface LabColorSpace extends ColorSpace {
-  _obj: "labColor"
-  luminance: number
-  a: number
-  b: number
+  _obj: "labColor";
+  luminance: number;
+  a: number;
+  b: number;
 }
 export interface GrayscaleColorSpace extends ColorSpace {
-  _obj: "grayscale"
-  gray: number
+  _obj: "grayscale";
+  gray: number;
 }
 export interface OpacityColorSpace extends ColorSpace {
-  _obj: "opacityClass"
-  opacity: number
+  _obj: "opacityClass";
+  opacity: number;
 }
 
-export enum ColorName {
-  none = 'none',
-  yellowColor = 'yellowColor',
-  red = 'red',
-  orange = 'orange',
-  green = 'green',
-  blue = 'blue',
-  violet = 'violet',
-  gray = 'gray',
-  black = 'black',
-}
+export type ColorName =
+  | "none"
+  | "yellowColor"
+  | "red"
+  | "orange"
+  | "green"
+  | "blue"
+  | "violet"
+  | "gray"
+  | "black";
 
 export interface ColorNameEnum {
-  _enum: 'color'
-  _value: ColorName
+  _enum: "color";
+  _value: ColorName;
 }
 
 export interface PsRGBColorSpace extends ColorSpace {
-  _obj: "RGBColor"
-  red: number
-  grain: number
-  blue: number
+  _obj: "RGBColor";
+  red: number;
+  grain: number;
+  blue: number;
 }
 
 export interface PsCMYKColorSpace extends ColorSpace {
-  _obj: "CMYKColorClass"
-  cyan: number
-  magenta: number
-  yellowColor: number
-  black: number
+  _obj: "CMYKColorClass";
+  cyan: number;
+  magenta: number;
+  yellowColor: number;
+  black: number;
 }
 
 export interface PsHSBColorSpace extends ColorSpace {
-  _obj: "HSBColorClass"
-  hue: UnitValue
-  saturation: number
-  brightness: number
+  _obj: "HSBColorClass";
+  hue: UnitValue;
+  saturation: number;
+  brightness: number;
 }
 
-export enum CanvasExtensionColorType {
-  foregroundColor = 'foregroundColor',
-  backgroundColor = 'foregroundColor',
-  white = 'white',
-  black = 'black',
-  grey = 'grey',
-  color = 'color',
-}
+export type CanvasExtensionColorType =
+  | "foregroundColor"
+  | "foregroundColor"
+  | "white"
+  | "black"
+  | "grey"
+  | "color";
 
 export interface ColorSettingsDescriptor {
-  _obj: 'colorSettings'
-  name: string
-  workingRGB: string
-  workingCMYK: string
-  workingGray: string
-  workingSpot: string
-  policyRGB: PolicyEnum
-  policyCMYK: PolicyEnum
-  policyGray: PolicyEnum
-  askMismatchOpening: boolean
-  askMismatchPasting: boolean
-  askMissing: boolean
-  engine: string
-  intent: IntentEnum
-  mapBlack: boolean
-  dither: boolean
-  renderSceneReferred: boolean
-  monitorCompression: boolean
-  RGBBlendGamma: boolean
-  TextBlendGamma: number
+  _obj: "colorSettings";
+  name: string;
+  workingRGB: string;
+  workingCMYK: string;
+  workingGray: string;
+  workingSpot: string;
+  policyRGB: PolicyEnum;
+  policyCMYK: PolicyEnum;
+  policyGray: PolicyEnum;
+  askMismatchOpening: boolean;
+  askMismatchPasting: boolean;
+  askMissing: boolean;
+  engine: string;
+  intent: IntentEnum;
+  mapBlack: boolean;
+  dither: boolean;
+  renderSceneReferred: boolean;
+  monitorCompression: boolean;
+  RGBBlendGamma: boolean;
+  TextBlendGamma: number;
 }
 
 /**
@@ -125,24 +137,30 @@ export interface ColorSettingsDescriptor {
  * -------------------------------------------------------------------------------------------------
  */
 
-export type Color = RGBColorSpace | HSBColorSpace | CMYKColorSpace | LabColorSpace | GrayscaleColorSpace | OpacityColorSpace;
+export type Color =
+  | RGBColorSpace
+  | HSBColorSpace
+  | CMYKColorSpace
+  | LabColorSpace
+  | GrayscaleColorSpace
+  | OpacityColorSpace;
 
 export interface RGBColorSpace extends ColorSpace {
-  _obj: "RGBColor"
-  red: number
-  green: number
-  blue: number
+  _obj: "RGBColor";
+  red: number;
+  green: number;
+  blue: number;
 }
 export interface HSBColorSpace extends ColorSpace {
-  _obj: "HSBColorClass"
-  hue: number
-  saturation: number
-  brightness: number
+  _obj: "HSBColorClass";
+  hue: number;
+  saturation: number;
+  brightness: number;
 }
 export interface CMYKColorSpace extends ColorSpace {
-  _obj: "CMYKColorClass"
-  cyan: number
-  magenta: number
-  yellow: number
-  black: number
+  _obj: "CMYKColorClass";
+  cyan: number;
+  magenta: number;
+  yellow: number;
+  black: number;
 }
