@@ -1,6 +1,6 @@
 {
   "name": "photoshop-types",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Type definitions for most of the internal descriptors and properties in Adobe Photoshop, which are helpful for UXP plugin development",
   "main": "index.d.ts",
   "types": "index.d.ts",
