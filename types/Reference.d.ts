@@ -48,3 +48,9 @@ export interface LayerTargetReference extends LayerReference, TargetEnum {}
 export interface LayerIdReference extends LayerReference, _idKey {}
 export interface LayerIndexReference extends LayerIdReference, _indexKey {}
 export interface LayerNameReference extends LayerIdReference, _nameKey {}
+
+export type TargetProperty = _indexKey | _nameKey | _idKey
+export interface _offsetKey {
+  _offset: number
+}
+export type HistoryStateTargetProperty = TargetProperty | _offsetKey

@@ -49,6 +49,8 @@ export interface MarqueeDescriptor {
   $FxHU: number
 }
 
+export type SelectionModeString = 'set' | 'subtractFrom' | 'addTo' | 'interfaceWhite'
+
 export type SelectionMode =
   1 | // new
   2 | // add
