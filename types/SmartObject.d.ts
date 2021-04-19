@@ -22,11 +22,24 @@ export interface SmartObjectMore {
   x: PointDescriptor
   size: PointDescriptorWidthHeight
   resolution: DensityValue
+  filterFX?: FilterFXStyleDescriptor
   comp: number
   compInfo: {
     compID: number
     originalCompID: number
   }
+}
+
+export interface FilterFXStyleDescriptor {
+  _obj: 'filterFXStyle'
+  enabled: boolean
+  validAtPosition: boolean
+  filterMaskEnable: boolean
+  filterMaskLinked: boolean
+  filterMaskExtendWithWhite: boolean
+  filterFXList: FilterFXDescriptor[]
+  filterMaskDensity: number
+  filterMaskFeather: number
 }
 
 export interface PlacedContentTypeEnum {

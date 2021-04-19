@@ -32,6 +32,7 @@ export interface LayerDescriptor {
   visible: boolean
   mode: BlendModeEnum
   opacity: number
+  linkedLayerIDs?: number[]
   layerID: number
   itemIndex: number
   count: number
@@ -43,6 +44,7 @@ export interface LayerDescriptor {
   layerSection: LayerSectionTypeEnum
   layerLocking: LayerLockingDescriptor
   group: boolean
+  layerSectionExpanded?: boolean
   targetChannels: ChannelReference[]
   visibleChannels: ChannelReference[]
   channelRestrictions: ChannelEnum[]
