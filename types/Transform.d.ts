@@ -67,3 +67,16 @@ export interface WarpDescriptorExtended extends WarpDescriptor {
   vOrder: number
   customEnvelopeWarp: CustomEnvelopeWarpDescriptor
 }
+
+export type AlignDistributeSelector = 'ADSCentersH' | 'ADSCentersV' | 'ADSLefts' | 'ADSRights' | 'ADSTops' | 'ADSBottoms'
+
+export type QuadCenterState =
+   | 'QCSCorner0' // topLeft
+   | 'QCSSide0' // topCenter
+   | 'QCSCorner1' // topRight
+   | 'QCSSide3' // middleLeft
+   | 'QCSAverage' // center
+   | 'QCSSide1' // middleRight
+   | 'QCSCorner3' // bottomLeft
+   | 'QCSSide2' // bottomCenter
+   | 'QCSCorner2' // bottomRight

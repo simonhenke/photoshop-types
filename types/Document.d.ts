@@ -1,5 +1,5 @@
 import { ColorSpaceEnum, PsColor } from './Color'
-import { TopRightBottomLeft, UVPointDescriptor } from './Geometry'
+import { TopRightBottomLeft, UVPointDescriptor, UVTopRightBottomLeft } from './Geometry'
 import { GeneratorSettingsDescriptor } from './Layer'
 import {
   DocumentTargetReference,
@@ -60,6 +60,7 @@ export interface DocumentDescriptor {
   printOutputOptions: PrintOutputOptionsDescriptor
   printOutput: PrintOutputDescriptor
   selectionEdgesVisible: boolean
+  selection: SelectionRectangle
   center: UVPointDescriptor<DistanceValue>
   hasBackgroundLayer: boolean
   generatorSettings: GeneratorSettingsDescriptor
@@ -71,6 +72,11 @@ export interface DocumentDescriptor {
   slices: Slices
   patternPreviewMode: boolean
 }
+
+export interface SelectionRectangle extends UVTopRightBottomLeft {
+  _obj: 'rectangle',
+}
+
 
 export interface FileInfo {
   _obj: 'fileInfo'

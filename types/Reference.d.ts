@@ -21,7 +21,7 @@ export interface _indexKey {
 }
 
 export interface _nameKey {
-  _name: number
+  _name: string
 }
 
 export interface DocumentReference {

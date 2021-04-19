@@ -1,4 +1,4 @@
-import { UnitValue } from "./Unit";
+import { PixelValue, UnitValue } from "./Unit";
 
 export interface AlignmentEnum {
   _enum: 'alignmentType'
@@ -34,7 +34,7 @@ export interface TopRightBottomLeft {
   left: number
 }
 
-export interface UVTopRightBottomLeft<UV extends UnitValue = UnitValue> {
+export interface UVTopRightBottomLeft<UV extends UnitValue = PixelValue> {
   top: UV
   right: UV
   bottom: UV

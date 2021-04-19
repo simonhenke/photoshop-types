@@ -72,6 +72,7 @@ export interface LayerDescriptor {
   textWarningLevel: number
   textKey?: TextKeyDescriptor
   parentLayerID: number
+  layerSVGdata?: string
 
   // --- Smart Object Layer
   smartObject?: SmartObjectDescriptor
