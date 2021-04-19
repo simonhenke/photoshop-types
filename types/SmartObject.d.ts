@@ -1,6 +1,7 @@
 import { PsColor } from "./Color";
 import { BlendModeEnum } from "./Common";
 import { CornersArray, PointDescriptor, PointDescriptorWidthHeight } from "./Geometry";
+import { FileReference } from "./Reference";
 import { WarpDescriptorExtended } from "./Transform";
 import { DensityValue, Fraction, PercentValue } from "./Unit";
 
@@ -72,13 +73,6 @@ export interface LinkedSmartObjectDescriptor extends SmartObjectGenericPropertie
   linkMissing: boolean
   linkChanged: boolean
 }
-
-export interface FileReference {
-  _path: string
-  _kind: FileReferenceKind
-}
-
-export type FileReferenceKind = 'local' | 'cloud'
 
 export interface CloudLinkDescriptor {
   _obj: 'ccLibrariesElement'

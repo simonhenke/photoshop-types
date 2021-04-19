@@ -28,6 +28,13 @@ export interface DocumentReference {
   _ref: 'document'
 }
 
+export interface FileReference {
+  _path: string
+  _kind: FileReferenceKind
+}
+
+export type FileReferenceKind = 'local' | 'cloud'
+
 export interface DocumentTargetReference extends DocumentReference, TargetEnum {}
 export interface DocumentIdReference extends DocumentReference, _idKey {}
 export interface DocumentIndexReference extends DocumentReference, _indexKey {}

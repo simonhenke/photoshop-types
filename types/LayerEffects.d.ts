@@ -2,6 +2,7 @@ import { PsColor } from "./Color";
 import { BlendModeEnum } from "./Common";
 import { PointDescriptor, UVPointDescriptor } from "./Geometry";
 import { GradientDescriptor, GradientTypeEnum } from "./Gradient";
+import { PatternDescriptor } from "./Layer";
 import { AngleValue, PercentValue, PixelValue } from "./Unit";
 
 export interface LayerEffectsDescriptor {
@@ -160,12 +161,6 @@ export interface FrameFXDescriptorBase extends LayerFxGenericProperties {
   overprint: boolean,
   size: PixelValue,
   color: PsColor,
-}
-
-export interface PatternDescriptor {
-  _obj: 'pattern'
-  name: string
-  ID: string // UUID
 }
 
 export interface PatternFillProperties {

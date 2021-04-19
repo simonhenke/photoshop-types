@@ -3,11 +3,11 @@ import { TopRightBottomLeft, UVPointDescriptor, UVTopRightBottomLeft } from './G
 import { GeneratorSettingsDescriptor } from './Layer'
 import {
   DocumentTargetReference,
+  FileReference,
   LayerIdReference,
   LayerIndexReference,
   PropertyReference
 } from './Reference'
-import { FileReference } from './SmartObject'
 import {
   DensityValue,
   DistanceValue,

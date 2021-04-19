@@ -1,9 +1,9 @@
 import { ChannelEnum, ChannelReference } from "./Channel";
-import { PsColor, ColorNameEnum } from "./Color";
+import { ColorNameEnum, PsColor } from "./Color";
 import { BlendModeEnum } from "./Common";
 import { PointDescriptor, TopRightBottomLeft, UVRectangleDescriptor, UVTopRightBottomLeft } from "./Geometry";
 import { GradientDescriptor, GradientType } from "./Gradient";
-import { LayerEffectsDescriptor, PatternDescriptor } from "./LayerEffects";
+import { LayerEffectsDescriptor } from "./LayerEffects";
 import { SmartObjectDescriptor, SmartObjectMore } from "./SmartObject";
 import { TextKeyDescriptor } from "./TextKey";
 import { TransformMatrixDescriptor } from "./Transform";
@@ -85,6 +85,12 @@ export interface LayerDescriptor {
 
   // --- Adjustment Layer
   adjustment: Adjustment[]
+}
+
+export interface PatternDescriptor {
+  _obj: 'pattern'
+  name: string
+  ID: string // UUID
 }
 
 export interface LayerSectionTypeEnum {
