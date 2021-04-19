@@ -21,10 +21,16 @@ export interface PointDescriptor {
   vertical: number
 }
 
-export interface UVPointDescriptor<UV extends UnitValue = UnitValue> {
+export interface UVPointDescriptor<UV extends UnitValue = PixelValue> {
   _obj: 'paint' | 'point'
   horizontal: UV
   vertical: UV
+}
+
+export interface UVPointDescriptorXY<UV extends UnitValue = PixelValue> {
+  _obj: 'paint' | 'point'
+  x: UV
+  y: UV
 }
 
 export interface TopRightBottomLeft {

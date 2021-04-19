@@ -47,6 +47,22 @@ export interface ColorSpaceEnum {
   _value: ColorSpaceKeys;
 }
 
+export interface ColorSpaceModeEnum {
+  _enum: 'colorSpace'
+  _value: ColorSpaceMode
+}
+
+export type ColorSpaceMode =
+  | "bitmap"
+  | "grayScale"
+  | "duotone"
+  | "indexedColor"
+  | "RGBColor"
+  | "CMYKColorEnum"
+  | "labColor"
+  | "multichannel"
+  | "useICCProfile";
+
 export interface LabColorSpace extends ColorSpace {
   _obj: "labColor";
   luminance: number;

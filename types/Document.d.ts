@@ -1,5 +1,5 @@
-import { ColorSpaceEnum, PsColor } from './Color'
-import { TopRightBottomLeft, UVPointDescriptor, UVTopRightBottomLeft } from './Geometry'
+import { ColorSpaceModeEnum, PsColor } from './Color'
+import { PointDescriptor, TopRightBottomLeft, UVPointDescriptor, UVPointDescriptorXY, UVTopRightBottomLeft } from './Geometry'
 import { GeneratorSettingsDescriptor } from './Layer'
 import {
   DocumentTargetReference,
@@ -17,60 +17,117 @@ import {
 } from './Unit'
 
 export interface DocumentDescriptor {
-  mode: ColorSpaceEnum
-  bigNudgeH: number
-  bigNudgeV: number
-  rulerOriginH: number
-  rulerOriginV: number
-  width: DistanceValue
-  height: DistanceValue
-  resolution: DensityValue
-  title: string
-  fileInfo: FileInfo
-  numberOfPaths: number
-  numberOfChannels: number
-  numberOfLayers: number
-  targetPathIndex: number
-  workPathIndex: number
-  clippingPathInfo: ClippingPathInfo
-  depth: 8 | 16 | 32
-  fileReference: FileReference
-  documentID: number
-  copyright: boolean
-  watermark: boolean
-  isDirty: boolean
-  count: number
+  mode: ColorSpaceModeEnum;
+  bigNudgeH: number;
+  bigNudgeV: number;
+  rulerOriginH: number;
+  rulerOriginV: number;
+  width: DistanceValue;
+  height: DistanceValue;
+  resolution: DensityValue;
+  title: string;
+  fileInfo: FileInfo;
+  numberOfPaths: number;
+  numberOfChannels: number;
+  numberOfLayers: number;
+  numberOfGuides?: number;
+  targetPathIndex: number;
+  workPathIndex: number;
+  clippingPathInfo: ClippingPathInfo;
+  depth: 8 | 16 | 32;
+  fileReference: FileReference;
+  documentID: number;
+  copyright: boolean;
+  watermark: boolean;
+  isDirty: boolean;
+  count: number;
+  itemIndex: number;
+  colorSamplerList?: ColorSamplerDescriptor[];
+  manage: ManageEnum;
+  format?: Format;
+  quickMask: boolean;
+  histogram: number[];
+  EXIF: string;
+  pixelScaleFactor: NoneValue;
+  XMPMetadataAsUTF8: string;
+  compsList?: CompsClassDescriptor[];
+  measurementScale: MeasurementScaleDescriptor;
+  countClass?: CountClassDescriptor[];
+  targetLayers: LayerIndexReference[];
+  targetLayersIDs: LayerIdReference[];
+  targetLayersIndexes: LayerIndexReference[];
+  zoom: PercentValue;
+  printCopies: number;
+  printCurrentPrinter: string;
+  printerList: string[];
+  printColorHandling: PrintColorHandlingEnum;
+  printOutputOptions: PrintOutputOptionsDescriptor;
+  printOutput: PrintOutputDescriptor;
+  selectionEdgesVisible: boolean;
+  selection?: SelectionRectangle;
+  center: UVPointDescriptor<DistanceValue>;
+  hasBackgroundLayer: boolean;
+  generatorSettings: GeneratorSettingsDescriptor;
+  visible: boolean;
+  targetPathVisibility: boolean;
+  guidesVisibility: boolean;
+  smartGuidesVisibility: boolean;
+  rulersVisibility: boolean;
+  slices: Slices;
+  patternPreviewMode: boolean;
+  artboards?: ArtboardsDescriptor;
+  globalAngle?: number;
+  json?: string;
+  slicesVisibility?: boolean;
+  viewTransform?: number[];
+  pageSetup?: any; // TODO: ??
+  printSettings?: any; // TODO: ??
+  points?: UVPointDescriptorXY<DistanceValue>[]
+}
+
+export interface ArtboardsDescriptor {
+  _obj: "artboards";
+  list: Artboard[];
+  autoExpandOffset: PointDescriptor;
+  origin: PointDescriptor;
+  autoExpandEnabled: boolean;
+  autoNestEnabled: boolean;
+  autoPositionEnabled: boolean;
+  shrinkwrapOnSaveEnabled: boolean;
+  docDefaultNewArtboardBackgroundColor: PsColor;
+  docDefaultNewArtboardBackgroundType: number;
+}
+
+export interface Artboard {
+  top: number;
+  bottom: number;
+  layerID: number;
+}
+
+export interface CountClassDescriptor {
+  _obj: "countClass"
+  x: DistanceValue
+  y: DistanceValue
+  group: number
   itemIndex: number
-  manage: ManageEnum
-  format?: Format
-  quickMask: boolean
-  histogram: number[]
-  EXIF: string
-  pixelScaleFactor: NoneValue
-  XMPMetadataAsUTF8: string
-  measurementScale: MeasurementScaleDescriptor
-  targetLayers: LayerIndexReference[]
-  targetLayersIDs: LayerIdReference[]
-  targetLayersIndexes: LayerIndexReference[]
-  zoom: PercentValue
-  printCopies: number
-  printCurrentPrinter: string
-  printerList: string[]
-  printColorHandling: PrintColorHandlingEnum
-  printOutputOptions: PrintOutputOptionsDescriptor
-  printOutput: PrintOutputDescriptor
-  selectionEdgesVisible: boolean
-  selection: SelectionRectangle
-  center: UVPointDescriptor<DistanceValue>
-  hasBackgroundLayer: boolean
-  generatorSettings: GeneratorSettingsDescriptor
-  visible: boolean
-  targetPathVisibility: boolean
-  guidesVisibility: boolean
-  smartGuidesVisibility: boolean
-  rulersVisibility: boolean
-  slices: Slices
-  patternPreviewMode: boolean
+}
+
+export interface CompsClassDescriptor {
+  _obj: "compsClass"
+  title: string
+  itemIndex: number
+  ID: number
+  selection: boolean
+  useVisibility: boolean
+  usePosition: boolean
+  useAppearance: boolean
+  useChildLayerCompState: boolean
+}
+
+export interface ColorSamplerDescriptor {
+  _obj: "colorSampler"
+  position: UVPointDescriptor
+  colorSpace: ColorSpaceModeEnum
 }
 
 export interface SelectionRectangle extends UVTopRightBottomLeft {
