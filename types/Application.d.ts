@@ -160,4 +160,29 @@ export interface ApplicationDescriptor {
   panelID: string
   mondoFilterLevel: number
   numberOfActionSets: number
+  menuBarInfo?: MenuBarInfo
+}
+
+export interface MenuBarInfo {
+  submenu: MenuBarCommand[]
+}
+
+export interface MenuBarCommand {
+  command: number;
+  menuID: number;
+  title: string;
+  name: string;
+  visible: boolean;
+  enabled: boolean;
+  checked: boolean;
+  kind: string;
+  menuShortcut: MenuShortcut;
+  submenu: MenuBarCommand[];
+}
+
+export interface MenuShortcut {
+  shiftKey: boolean;
+  commandKey: boolean;
+  optionKey: boolean;
+  controlKey: boolean;
 }
