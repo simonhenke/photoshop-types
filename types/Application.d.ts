@@ -40,7 +40,7 @@ import {
   SizeEnum,
   WorkspaceDescriptor,
 } from './Presets'
-import { FileReference } from './SmartObject'
+import { FileReference } from './Reference'
 import {
   CurrentToolOptionsDescriptor,
   FontListPresetDescriptor,
