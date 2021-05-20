@@ -75,6 +75,7 @@ export interface LayerDescriptor {
   textKey?: TextKeyDescriptor
   parentLayerID: number
   layerSVGdata?: string
+  pathBounds?:PathBoundsDescriptor
 
   // --- Smart Object Layer
   smartObject?: SmartObjectDescriptor
@@ -87,6 +88,11 @@ export interface LayerDescriptor {
 
   // --- Adjustment Layer
   adjustment: Adjustment[]
+}
+
+export interface PathBoundsDescriptor {
+  _obj: "rectangle",
+  pathBounds: FloatRectDescriptor
 }
 
 export interface PatternDescriptor {
