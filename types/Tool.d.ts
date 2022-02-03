@@ -2,8 +2,7 @@ import { PsColor } from './Color'
 import { BlendModeEnum } from './Common'
 import { Orientation } from './Geometry'
 import { GradientDescriptor, GradientTypeNumeric } from './Gradient'
-import { RadiiDescriptor, SolidColorLayerDescriptor } from './Layer'
-import { PatternDescriptor } from './LayerEffects'
+import { PatternDescriptor, RadiiDescriptor, SolidColorLayerDescriptor } from './Layer'
 import { ParagraphStyleDescriptor, TextGriddingEnum, TextStyleDescriptor } from './TextKey'
 import {
   AngleValue,

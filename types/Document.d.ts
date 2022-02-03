@@ -83,6 +83,7 @@ export interface DocumentDescriptor {
   pageSetup?: any; // TODO: ??
   printSettings?: any; // TODO: ??
   points?: UVPointDescriptorXY<DistanceValue>[]
+  rulerPoints?: UVPointDescriptorXY<DistanceValue>[]
 }
 
 export interface ArtboardsDescriptor {

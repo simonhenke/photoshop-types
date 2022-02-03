@@ -17,7 +17,7 @@ export type ColorStopType = 'userStop' | 'foregroundColor' | 'backgroundColor'
 
 export interface ColorStopDescriptor {
   _obj: 'colorStop',
-  color: PsColor,
+  color?: PsColor,
   type: ColorStopTypeEnum,
   location: number,
   midpoint: number,

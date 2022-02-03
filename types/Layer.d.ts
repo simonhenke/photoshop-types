@@ -1,4 +1,4 @@
-import { ChannelEnum, ChannelReference } from "./Channel";
+import { ChannelNameEnum, ChannelReference } from "./Channel";
 import { ColorNameEnum, PsColor } from "./Color";
 import { BlendModeEnum } from "./Common";
 import { PointDescriptor, TopRightBottomLeft, UVRectangleDescriptor, UVTopRightBottomLeft } from "./Geometry";
@@ -47,7 +47,7 @@ export interface LayerDescriptor {
   layerSectionExpanded?: boolean
   targetChannels: ChannelReference[]
   visibleChannels: ChannelReference[]
-  channelRestrictions: ChannelEnum[]
+  channelRestrictions: ChannelNameEnum[]
   fillOpacity: number
   hasUserMask: boolean
   hasVectorMask: boolean
